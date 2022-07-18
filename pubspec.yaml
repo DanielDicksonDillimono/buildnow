@@ -42,6 +42,7 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.1+1
   flutter_svg_provider: ^1.0.3
+  firebase_storage: ^10.3.2
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,8 @@ flutter:
     - me.jpg
     - pic.svg
     - pic2.svg
+    - Play.png
+    - playT.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
