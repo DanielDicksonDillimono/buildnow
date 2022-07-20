@@ -207,6 +207,7 @@ class _StartPageState extends State<StartPage>
                                     : AnimatedTextKit(
                                         // pause: const Duration(milliseconds: 50),
                                         repeatForever: true,
+                                        //totalRepeatCount: 2,
                                         onNext: (stage, done) {
                                           //  print(stage);
                                         },
@@ -254,7 +255,19 @@ class _StartPageState extends State<StartPage>
                                             textAlign: TextAlign.center,
                                           )
                                         ],
+                                        // onFinished: () {
+                                        //   Navigator.pushNamed(
+                                        //     context,
+                                        //     '/home',
+                                        //   );
+                                        // },
                                       ),
+                                //     Container(
+                                //       padding: EdgeInsets.only(
+                                //   top: 20,
+                                // ),
+                                // child: ,
+                                //     )
                                 Container(
                                   padding: EdgeInsets.only(
                                     top: 20,
