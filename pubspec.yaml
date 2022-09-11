@@ -84,6 +84,9 @@ flutter:
     - pic2.svg
     - Play.png
     - playT.png
+    - coding.jpeg
+    - Ui.jpeg
+    - Goals.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

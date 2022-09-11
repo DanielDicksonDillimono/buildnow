@@ -1,8 +1,9 @@
 //import 'package:buildnow/my_flutter_app_icons.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:buildnow/build_now_icons_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart' as NewSVG;
+//import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:flutter_svg_provider/flutter_svg_provider.dart' as newSVG;
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,6 +43,8 @@ class _HomePageState extends State<HomePage> {
                                 });
                               },
                               child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
                                 elevation:
                                     selectedStage == Stages.specify ? 20 : 5,
                                 color: selectedStage == Stages.specify
@@ -123,6 +126,8 @@ class _HomePageState extends State<HomePage> {
                                 });
                               },
                               child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
                                 elevation:
                                     selectedStage == Stages.design ? 20 : 5,
                                 color: selectedStage == Stages.design
@@ -203,6 +208,8 @@ class _HomePageState extends State<HomePage> {
                                 });
                               },
                               child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
                                 elevation:
                                     selectedStage == Stages.design ? 20 : 5,
                                 color: selectedStage == Stages.implement
@@ -286,141 +293,334 @@ class _HomePageState extends State<HomePage> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width * 0.7,
                   color: Color.fromARGB(255, 38, 38, 38),
-                  child: Center(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        //mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Center(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      //mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Center(
+                          child: Container(
+                            padding: EdgeInsets.all(50),
                             child: Container(
-                              padding: EdgeInsets.all(50),
-                              child: Container(
-                                padding: EdgeInsets.all(20),
-                                child: selectedStage == Stages.specify
-                                    ? Column(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.only(top: 5),
-                                            child: Icon(
-                                              BuildNowIcons.implement,
-                                              size: 100,
+                              padding: EdgeInsets.all(20),
+                              child: selectedStage == Stages.specify
+                                  ? Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.45,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.7,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: Image.asset("Goals.jpeg")
+                                                  .image,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          padding: EdgeInsets.only(top: 20),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                BuildNowIcons.specifyicon,
+                                                size: 100,
+                                                color: Colors.white,
+                                              ),
+                                              Container(
+                                                padding:
+                                                    EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  "Specify",
+                                                  style: GoogleFonts.montserrat(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 40,
+                                                    //overflow: TextOverflow.visible,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(top: 50),
+                                          child: Text(
+                                            "Every problem deserves a unique approach.\nAt this stage you and I will find out what exactly the problem is, who we are solving the problem for and what is a feasible solution.",
+                                            textAlign: TextAlign.center,
+                                            style: GoogleFonts.montserrat(
                                               color: Colors.white,
+                                              fontWeight: FontWeight.w100,
+                                              fontSize: 20,
+                                              //overflow: TextOverflow.visible,
                                             ),
                                           ),
-                                          Container(
-                                            padding: EdgeInsets.only(top: 5),
-                                            child: Text(
-                                              "Specify",
-                                              style: GoogleFonts.montserrat(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 40,
-                                                //overflow: TextOverflow.visible,
-                                              ),
-                                            ),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                            top: 20,
                                           ),
-                                          Container(
-                                            padding: EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              "Break down your problem and outline possible features of a solution",
-                                              textAlign: TextAlign.center,
-                                              style: GoogleFonts.montserrat(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.w100,
-                                                fontSize: 20,
-                                                //overflow: TextOverflow.visible,
+                                          child: ElevatedButton.icon(
+                                              style: ElevatedButton.styleFrom(
+                                                  elevation: 10,
+                                                  primary: Colors.blue,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20),
+                                                  ),
+                                                  minimumSize: Size(200, 50)),
+                                              onPressed: () {
+                                                Navigator.pushNamed(
+                                                  context,
+                                                  '/home',
+                                                );
+                                              },
+                                              icon: Icon(
+                                                Icons.arrow_forward,
+                                              ),
+                                              label: AnimatedTextKit(
+                                                totalRepeatCount: 1,
+                                                animatedTexts: [
+                                                  TyperAnimatedText(
+                                                    "Specify Now!",
+                                                    textStyle:
+                                                        GoogleFonts.montserrat(
+                                                      //fontSize: 50,
+                                                      fontWeight:
+                                                          FontWeight.w900,
+                                                    ),
+                                                    speed: const Duration(
+                                                        milliseconds: 50),
+                                                  )
+                                                ],
+                                              )),
+                                        ),
+                                      ],
+                                    )
+                                  : selectedStage == Stages.design
+                                      ? Column(
+                                          children: [
+                                            Container(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.45,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.7,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  image: Image.asset("Ui.jpeg")
+                                                      .image,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              padding: EdgeInsets.only(top: 20),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    BuildNowIcons.design,
+                                                    size: 100,
+                                                    color: Colors.white,
+                                                  ),
+                                                  Container(
+                                                    padding:
+                                                        EdgeInsets.only(top: 5),
+                                                    child: Text(
+                                                      "Design",
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 40,
+                                                        //overflow: TextOverflow.visible,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                          )
-                                        ],
-                                      )
-                                    : selectedStage == Stages.design
-                                        ? Column(
-                                            children: [
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 5),
-                                                child: Icon(
-                                                  BuildNowIcons.design,
-                                                  size: 100,
+                                            Container(
+                                              padding: EdgeInsets.only(top: 50),
+                                              child: Text(
+                                                "Design goes beyond what is seen!\nAt this stage you and I will create an awesom experience for your users",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.montserrat(
                                                   color: Colors.white,
+                                                  fontWeight: FontWeight.w100,
+                                                  fontSize: 20,
+                                                  //overflow: TextOverflow.visible,
                                                 ),
                                               ),
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 5),
-                                                child: Text(
-                                                  "Design",
-                                                  style: GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 40,
-                                                    //overflow: TextOverflow.visible,
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.only(
+                                                top: 20,
+                                              ),
+                                              child: ElevatedButton.icon(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          elevation: 10,
+                                                          primary: Colors.blue,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20),
+                                                          ),
+                                                          minimumSize:
+                                                              Size(200, 50)),
+                                                  onPressed: () {
+                                                    Navigator.pushNamed(
+                                                      context,
+                                                      '/home',
+                                                    );
+                                                  },
+                                                  icon: Icon(
+                                                    Icons.arrow_forward,
                                                   ),
+                                                  label: AnimatedTextKit(
+                                                    totalRepeatCount: 1,
+                                                    animatedTexts: [
+                                                      TyperAnimatedText(
+                                                        "Design Now!",
+                                                        textStyle: GoogleFonts
+                                                            .montserrat(
+                                                          //fontSize: 50,
+                                                          fontWeight:
+                                                              FontWeight.w900,
+                                                        ),
+                                                        speed: const Duration(
+                                                            milliseconds: 50),
+                                                      )
+                                                    ],
+                                                  )),
+                                            ),
+                                          ],
+                                        )
+                                      : Column(
+                                          children: [
+                                            Container(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.45,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.7,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  image:
+                                                      Image.asset("coding.jpeg")
+                                                          .image,
+                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 10),
-                                                child: Text(
-                                                  "Break down your problem and outline possible features of a solution",
-                                                  textAlign: TextAlign.center,
-                                                  style: GoogleFonts.montserrat(
+                                              padding: EdgeInsets.only(top: 20),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    BuildNowIcons.implement,
+                                                    size: 100,
                                                     color: Colors.white,
-                                                    fontWeight: FontWeight.w100,
-                                                    fontSize: 20,
-                                                    //overflow: TextOverflow.visible,
                                                   ),
-                                                ),
-                                              )
-                                            ],
-                                          )
-                                        : Column(
-                                            children: [
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 5),
-                                                child: Icon(
-                                                  BuildNowIcons.implement,
-                                                  size: 100,
+                                                  Container(
+                                                    padding:
+                                                        EdgeInsets.only(top: 5),
+                                                    child: Text(
+                                                      "Build",
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 40,
+                                                        //overflow: TextOverflow.visible,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.only(top: 50),
+                                              child: Text(
+                                                "Let's code! building for web, mobile or both? Let us",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.montserrat(
                                                   color: Colors.white,
+                                                  fontWeight: FontWeight.w100,
+                                                  fontSize: 20,
+                                                  //overflow: TextOverflow.visible,
                                                 ),
                                               ),
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 5),
-                                                child: Text(
-                                                  "Build",
-                                                  style: GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 40,
-                                                    //overflow: TextOverflow.visible,
-                                                  ),
-                                                ),
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.only(
+                                                top: 20,
                                               ),
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(top: 10),
-                                                child: Text(
-                                                  "Break down your problem and outline possible features of a solution",
-                                                  textAlign: TextAlign.center,
-                                                  style: GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.w100,
-                                                    fontSize: 20,
-                                                    //overflow: TextOverflow.visible,
+                                              child: ElevatedButton.icon(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          elevation: 10,
+                                                          primary: Colors.blue,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20),
+                                                          ),
+                                                          minimumSize:
+                                                              Size(200, 50)),
+                                                  onPressed: () {
+                                                    Navigator.pushNamed(
+                                                      context,
+                                                      '/home',
+                                                    );
+                                                  },
+                                                  icon: Icon(
+                                                    Icons.arrow_forward,
                                                   ),
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                              ),
+                                                  label: AnimatedTextKit(
+                                                    totalRepeatCount: 1,
+                                                    animatedTexts: [
+                                                      TyperAnimatedText(
+                                                        "Build Now!",
+                                                        textStyle: GoogleFonts
+                                                            .montserrat(
+                                                          //fontSize: 50,
+                                                          fontWeight:
+                                                              FontWeight.w900,
+                                                        ),
+                                                        speed: const Duration(
+                                                            milliseconds: 50),
+                                                      )
+                                                    ],
+                                                  )),
+                                            ),
+                                          ],
+                                        ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
