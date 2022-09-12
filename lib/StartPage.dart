@@ -177,91 +177,90 @@ class _StartPageState extends State<StartPage>
                             child: Column(
                               // mainAxisAlignment: Main,
                               children: [
-                                aboutToClick
-                                    ? Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Bring your mobile app ideas to life.",
-                                            style: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 70,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Text(
-                                            "Specify, Design, Build.",
-                                            style: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 40,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ],
-                                      )
-                                    : AnimatedTextKit(
-                                        // pause: const Duration(milliseconds: 50),
-                                        repeatForever: true,
-                                        //totalRepeatCount: 2,
-                                        onNext: (stage, done) {
-                                          //  print(stage);
-                                        },
-                                        animatedTexts: [
-                                          TyperAnimatedText(
-                                            "Bring your mobile app ideas to life.",
-                                            textStyle: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 70,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                            speed: const Duration(
-                                                milliseconds: 70),
-                                          ),
-                                          FadeAnimatedText(
-                                            "Specify",
-                                            textStyle: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 40,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          FadeAnimatedText(
-                                            "Design",
-                                            textStyle: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 40,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          FadeAnimatedText(
-                                            "Build",
-                                            textStyle: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 40,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          )
-                                        ],
-                                        // onFinished: () {
-                                        //   Navigator.pushNamed(
-                                        //     context,
-                                        //     '/home',
-                                        //   );
-                                        // },
+                                // aboutToClick
+                                //     ? Column(
+                                //         crossAxisAlignment:
+                                //             CrossAxisAlignment.center,
+                                //         children: [
+                                //           Text(
+                                //             "Bring your mobile app ideas to life.",
+                                //             style: GoogleFonts.montserrat(
+                                //               color: Colors.white,
+                                //               fontWeight: FontWeight.bold,
+                                //               fontSize: 70,
+                                //               //overflow: TextOverflow.visible,
+                                //             ),
+                                //             textAlign: TextAlign.center,
+                                //           ),
+                                //           Text(
+                                //             "Specify, Design, Build.",
+                                //             style: GoogleFonts.montserrat(
+                                //               color: Colors.white,
+                                //               fontWeight: FontWeight.w100,
+                                //               fontSize: 40,
+                                //               //overflow: TextOverflow.visible,
+                                //             ),
+                                //             textAlign: TextAlign.center,
+                                //           ),
+                                //         ],
+                                //       ) :
+                                AnimatedTextKit(
+                                  // pause: const Duration(milliseconds: 50),
+                                  repeatForever: true,
+                                  //totalRepeatCount: 2,
+                                  onNext: (stage, done) {
+                                    //  print(stage);
+                                  },
+                                  animatedTexts: [
+                                    TyperAnimatedText(
+                                      "Bring your mobile app ideas to life.",
+                                      textStyle: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 70,
+                                        //overflow: TextOverflow.visible,
                                       ),
+                                      textAlign: TextAlign.center,
+                                      speed: const Duration(milliseconds: 70),
+                                    ),
+                                    FadeAnimatedText(
+                                      "Specify",
+                                      textStyle: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w100,
+                                        fontSize: 40,
+                                        //overflow: TextOverflow.visible,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    FadeAnimatedText(
+                                      "Design",
+                                      textStyle: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w100,
+                                        fontSize: 40,
+                                        //overflow: TextOverflow.visible,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    FadeAnimatedText(
+                                      "Build",
+                                      textStyle: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w100,
+                                        fontSize: 40,
+                                        //overflow: TextOverflow.visible,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    )
+                                  ],
+                                  // onFinished: () {
+                                  //   Navigator.pushNamed(
+                                  //     context,
+                                  //     '/home',
+                                  //   );
+                                  // },
+                                ),
                                 //     Container(
                                 //       padding: EdgeInsets.only(
                                 //   top: 20,
@@ -329,9 +328,11 @@ class _StartPageState extends State<StartPage>
                   ),
                 ),
                 InkWell(
-                  onHover: (value) => setState(() {
-                    hoveringOver = value;
-                  }),
+                  onHover: (value) => setState(
+                    () {
+                      hoveringOver = value;
+                    },
+                  ),
                   child: SizedBox(
                     // decoration: BoxDecoration(
                     //   color: hoveringOver
