@@ -368,40 +368,31 @@ class _HomePageState extends State<HomePage> {
                                             top: 20,
                                           ),
                                           child: ElevatedButton.icon(
-                                              style: ElevatedButton.styleFrom(
-                                                  elevation: 10,
-                                                  primary: Colors.blue,
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20),
+                                            style: ElevatedButton.styleFrom(
+                                                elevation: 10,
+                                                primary: Colors.blue,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                minimumSize: Size(200, 50)),
+                                            onPressed: () {
+                                              Navigator.pushNamed(
+                                                context,
+                                                '/home',
+                                              );
+                                            },
+                                            icon: Icon(
+                                              Icons.arrow_forward,
+                                            ),
+                                            label: Text(
+                                              "Specify Now!",
+                                              style: GoogleFonts.montserrat(
+                                                  //fontSize: 50,
+                                                  // fontWeight: FontWeight.w900,
                                                   ),
-                                                  minimumSize: Size(200, 50)),
-                                              onPressed: () {
-                                                Navigator.pushNamed(
-                                                  context,
-                                                  '/home',
-                                                );
-                                              },
-                                              icon: Icon(
-                                                Icons.arrow_forward,
-                                              ),
-                                              label: AnimatedTextKit(
-                                                totalRepeatCount: 1,
-                                                animatedTexts: [
-                                                  TyperAnimatedText(
-                                                    "Specify Now!",
-                                                    textStyle:
-                                                        GoogleFonts.montserrat(
-                                                      //fontSize: 50,
-                                                      fontWeight:
-                                                          FontWeight.w900,
-                                                    ),
-                                                    speed: const Duration(
-                                                        milliseconds: 50),
-                                                  )
-                                                ],
-                                              )),
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     )
@@ -470,44 +461,33 @@ class _HomePageState extends State<HomePage> {
                                                 top: 20,
                                               ),
                                               child: ElevatedButton.icon(
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          elevation: 10,
-                                                          primary: Colors.blue,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
-                                                          ),
-                                                          minimumSize:
-                                                              Size(200, 50)),
-                                                  onPressed: () {
-                                                    Navigator.pushNamed(
-                                                      context,
-                                                      '/home',
-                                                    );
-                                                  },
-                                                  icon: Icon(
-                                                    Icons.arrow_forward,
-                                                  ),
-                                                  label: AnimatedTextKit(
-                                                    totalRepeatCount: 1,
-                                                    animatedTexts: [
-                                                      TyperAnimatedText(
-                                                        "Design Now!",
-                                                        textStyle: GoogleFonts
-                                                            .montserrat(
-                                                          //fontSize: 50,
-                                                          fontWeight:
-                                                              FontWeight.w900,
-                                                        ),
-                                                        speed: const Duration(
-                                                            milliseconds: 50),
-                                                      )
-                                                    ],
-                                                  )),
+                                                style: ElevatedButton.styleFrom(
+                                                    elevation: 10,
+                                                    primary: Colors.blue,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20),
+                                                    ),
+                                                    minimumSize: Size(200, 50)),
+                                                onPressed: () {
+                                                  Navigator.pushNamed(
+                                                    context,
+                                                    '/home',
+                                                  );
+                                                },
+                                                icon: Icon(
+                                                  Icons.arrow_forward,
+                                                ),
+                                                label: Text(
+                                                  "Design Now!",
+                                                  style: GoogleFonts.montserrat(
+                                                      //fontSize: 50,
+                                                      // fontWeight: FontWeight.w900,
+                                                      ),
+                                                ),
+                                              ),
                                             ),
                                           ],
                                         )
@@ -576,44 +556,33 @@ class _HomePageState extends State<HomePage> {
                                                 top: 20,
                                               ),
                                               child: ElevatedButton.icon(
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                          elevation: 10,
-                                                          primary: Colors.blue,
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
-                                                          ),
-                                                          minimumSize:
-                                                              Size(200, 50)),
-                                                  onPressed: () {
-                                                    Navigator.pushNamed(
-                                                      context,
-                                                      '/home',
-                                                    );
-                                                  },
-                                                  icon: Icon(
-                                                    Icons.arrow_forward,
-                                                  ),
-                                                  label: AnimatedTextKit(
-                                                    totalRepeatCount: 1,
-                                                    animatedTexts: [
-                                                      TyperAnimatedText(
-                                                        "Build Now!",
-                                                        textStyle: GoogleFonts
-                                                            .montserrat(
-                                                          //fontSize: 50,
-                                                          fontWeight:
-                                                              FontWeight.w900,
-                                                        ),
-                                                        speed: const Duration(
-                                                            milliseconds: 50),
-                                                      )
-                                                    ],
-                                                  )),
+                                                style: ElevatedButton.styleFrom(
+                                                    elevation: 10,
+                                                    primary: Colors.blue,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20),
+                                                    ),
+                                                    minimumSize: Size(200, 50)),
+                                                onPressed: () {
+                                                  Navigator.pushNamed(
+                                                    context,
+                                                    '/home',
+                                                  );
+                                                },
+                                                icon: Icon(
+                                                  Icons.arrow_forward,
+                                                ),
+                                                label: Text(
+                                                  "Build Now!",
+                                                  style: GoogleFonts.montserrat(
+                                                      //fontSize: 50,
+                                                      //fontWeight: FontWeight.w900,
+                                                      ),
+                                                ),
+                                              ),
                                             ),
                                           ],
                                         ),
