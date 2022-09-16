@@ -103,6 +103,9 @@ flutter:
     - family:  BuildNowIcons
       fonts:
         - asset: fonts/BuildNowIcons.ttf
+    - family:  LinkedIn
+      fonts:
+        - asset: fonts/LinkedIn.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
