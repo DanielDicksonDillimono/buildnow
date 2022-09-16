@@ -604,6 +604,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           )
+        //mobile block
         : Scaffold(
             body: Container(
               color: Color.fromARGB(255, 36, 36, 36),
@@ -616,6 +617,51 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      Center(
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          // decoration: BoxDecoration(
+                          //   shape: BoxShape.circle,
+                          //   color: Colors.white,
+                          // ),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: Image.asset("me.jpg").image,
+                                radius:
+                                    MediaQuery.of(context).size.width * 0.20,
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "Flutter Developer <>",
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    //overflow: TextOverflow.visible,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "Hi my name is Daniel Dickson Dillimono, Daniel for short. I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Always ready to brainstorm your ideas, design them and bring them to reality in mobile, web or desktop form. Do not wait, reachout and let's BUILDNOW!",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15,
+                                    //overflow: TextOverflow.visible,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                       Container(
                         padding: EdgeInsets.only(top: 20),
                         width: MediaQuery.of(context).size.width * 0.95,
