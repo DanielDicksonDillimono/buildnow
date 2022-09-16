@@ -78,6 +78,14 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Divider(
+                              color: Color.fromARGB(123, 158, 158, 158),
+                              thickness: 0.5,
+                            ),
+                          ),
+
                           //Specify button
                           Container(
                             padding: EdgeInsets.all(50),
@@ -223,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         padding: EdgeInsets.only(top: 10),
                                         child: Text(
-                                          "Break down your problem and outline possible features of a solution",
+                                          "Create all user flows and a full visual representation of your solution.",
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.montserrat(
                                             color:
@@ -306,7 +314,7 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         padding: EdgeInsets.only(top: 10),
                                         child: Text(
-                                          "Break down your problem and outline possible features of a solution",
+                                          "Finally, a functional Solution!",
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.montserrat(
                                             color: selectedStage ==
@@ -487,7 +495,7 @@ class _HomePageState extends State<HomePage> {
                                           Container(
                                             padding: EdgeInsets.all(50),
                                             child: Text(
-                                              "Design goes beyond what is seen!\nAt this stage you and I will create an awesom experience for your users",
+                                              "Design goes beyond what is seen!\nAt this stage you and I will create an awesome experience for your users. Create all user flows and a full visual representation of your solution.",
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.montserrat(
                                                 color: Colors.white,
@@ -699,7 +707,7 @@ class _HomePageState extends State<HomePage> {
                                               Container(
                                                 padding: EdgeInsets.all(50),
                                                 child: Text(
-                                                  "Let's code! building for web, mobile or both? Let us",
+                                                  "Let's code! building for web, mobile or both? Let us finally get down to it. Turn your solution into a functional working application.",
                                                   textAlign: TextAlign.center,
                                                   style: GoogleFonts.montserrat(
                                                     color: Colors.white,
@@ -817,13 +825,76 @@ class _HomePageState extends State<HomePage> {
                                     //overflow: TextOverflow.visible,
                                   ),
                                 ),
-                              )
+                              ),
+                              Container(
+                                //width: double.infinity,
+                                padding: EdgeInsets.only(
+                                  top: 20,
+                                ),
+                                child: ListTile(
+                                  leading: Icon(
+                                    LinkedIn.linkedin,
+                                    color: Colors.white,
+                                  ),
+                                  title: TextButton(
+                                    // style: ElevatedButton.styleFrom(
+                                    //   elevation: 10,
+                                    // ),
+                                    child: Text(
+                                      "Follow me on LinkedIn",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.,
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      launchUrl(Uri.parse(
+                                          "https://nl.linkedin.com/in/daniel-dickson-dillimono"));
+                                    },
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                //width: double.infinity,
+                                padding: EdgeInsets.only(
+                                  top: 20,
+                                ),
+                                child: ListTile(
+                                  leading: Icon(
+                                    LinkedIn.linkedin,
+                                    color: Colors.white,
+                                  ),
+                                  title: TextButton(
+                                    // style: ElevatedButton.styleFrom(
+                                    //   elevation: 10,
+                                    // ),
+                                    child: Text(
+                                      "Follow BuildNow on LinkedIn",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        //fontWeight: FontWeight.,
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      launchUrl(Uri.parse(
+                                          "https://www.linkedin.com/showcase/buildnowbydeeformed/?viewAsMember=true"));
+                                    },
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 20),
+                        padding: EdgeInsets.all(20),
+                        child: Divider(
+                          color: Color.fromARGB(123, 158, 158, 158),
+                          thickness: 0.5,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(top: 50),
                         width: MediaQuery.of(context).size.width * 0.95,
                         child: InkWell(
                           onTap: () {
@@ -1035,7 +1106,7 @@ class _HomePageState extends State<HomePage> {
                                                 padding:
                                                     EdgeInsets.only(top: 10),
                                                 child: Text(
-                                                  "Break down your problem and outline possible features of a solution",
+                                                  "Create all user flows and a full visual representation of your solution.",
                                                   textAlign: TextAlign.center,
                                                   style: GoogleFonts.montserrat(
                                                     color: selectedStage ==
@@ -1178,7 +1249,7 @@ class _HomePageState extends State<HomePage> {
                                                 padding:
                                                     EdgeInsets.only(top: 10),
                                                 child: Text(
-                                                  "Break down your problem and outline possible features of a solution",
+                                                  "Finally! let's get down to it. Let's turn your designs into a functional working application.",
                                                   textAlign: TextAlign.center,
                                                   style: GoogleFonts.montserrat(
                                                     color: selectedStage ==
