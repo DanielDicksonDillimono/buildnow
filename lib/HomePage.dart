@@ -836,10 +836,10 @@ class _HomePageState extends State<HomePage> {
                                     LinkedIn.linkedin,
                                     color: Colors.white,
                                   ),
-                                  title: TextButton(
-                                    // style: ElevatedButton.styleFrom(
-                                    //   elevation: 10,
-                                    // ),
+                                  title: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 10,
+                                    ),
                                     child: Text(
                                       "Follow me on LinkedIn",
                                       style: TextStyle(
@@ -864,10 +864,10 @@ class _HomePageState extends State<HomePage> {
                                     LinkedIn.linkedin,
                                     color: Colors.white,
                                   ),
-                                  title: TextButton(
-                                    // style: ElevatedButton.styleFrom(
-                                    //   elevation: 10,
-                                    // ),
+                                  title: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 10,
+                                    ),
                                     child: Text(
                                       "Follow BuildNow on LinkedIn",
                                       style: TextStyle(
