@@ -1,5 +1,6 @@
 //import 'package:buildnow/my_flutter_app_icons.dart';
 //import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:buildnow/build_now_icons_icons.dart';
 import 'package:buildnow/linkedIn.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +21,14 @@ class HomePage extends StatefulWidget {
 enum Stages { build, specify, design, implement, me }
 
 class _HomePageState extends State<HomePage> {
+  bool aboutToClick = false;
+  bool hoveringOver = false;
   Stages selectedStage = Stages.build;
   final AutoScrollController _scrollController =
       AutoScrollController(axis: Axis.vertical);
+
+  void goToContactForm() {}
+
   @override
   Widget build(BuildContext context) {
     return MediaQuery.of(context).orientation == Orientation.landscape
@@ -683,7 +689,7 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         padding: EdgeInsets.all(50),
                                         child: Text(
-                                          "Every problem deserves a unique approach.\nAt this stage you and I will find out what exactly the problem is, who we are solving the problem for and what is a feasible solution.",
+                                          "Every problem deserves a unique approach.\nAt this stage you and I will find out what exactly the problem is, who we are solving the problem for and what is a feasible solution.\n\nReceive wireframes and a list of features.",
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.montserrat(
                                             color: Colors.white,
@@ -706,12 +712,7 @@ class _HomePageState extends State<HomePage> {
                                                     BorderRadius.circular(20),
                                               ),
                                               minimumSize: Size(200, 50)),
-                                          onPressed: () {
-                                            Navigator.pushNamed(
-                                              context,
-                                              '/home',
-                                            );
-                                          },
+                                          onPressed: goToContactForm,
                                           icon: Icon(
                                             Icons.arrow_forward,
                                           ),
@@ -776,7 +777,7 @@ class _HomePageState extends State<HomePage> {
                                           Container(
                                             padding: EdgeInsets.all(50),
                                             child: Text(
-                                              "Design goes beyond what is seen!\nAt this stage you and I will create an awesome experience for your users. Create all user flows and a full visual representation of your solution.",
+                                              "Design goes beyond what is seen!\nAt this stage you and I will create an awesome experience for your users. Create all user flows and a full visual representation of your solution.\n\nReceive all digital designs and visualisations",
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.montserrat(
                                                 color: Colors.white,
@@ -800,12 +801,7 @@ class _HomePageState extends State<HomePage> {
                                                             20),
                                                   ),
                                                   minimumSize: Size(200, 50)),
-                                              onPressed: () {
-                                                Navigator.pushNamed(
-                                                  context,
-                                                  '/home',
-                                                );
-                                              },
+                                              onPressed: goToContactForm,
                                               icon: Icon(
                                                 Icons.arrow_forward,
                                               ),
@@ -943,98 +939,224 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                           )
                                         : selectedStage == Stages.build
-                                            ? Column(
-                                                children: [
-                                                  Container(
-                                                    height:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .height *
-                                                            0.45,
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.7,
-                                                    padding: EdgeInsets.only(
-                                                        top: 20),
-                                                    child: Image.asset(
-                                                        "AppImage.PNG"),
-                                                  ),
-                                                  Container(
-                                                    padding: EdgeInsets.all(50),
-                                                    child: Column(
-                                                      children: [
-                                                        Text(
-                                                          "Start the build-measure-learn cycle by turning your idea into a functional application. Enable rapid validation of your core idea.",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: GoogleFonts
-                                                              .montserrat(
-                                                            color: Colors.white,
-                                                            fontWeight:
-                                                                FontWeight.w100,
-                                                            fontSize: 20,
-                                                            //overflow: TextOverflow.visible,
-                                                          ),
-                                                        ),
-                                                        Text(
-                                                          "From: Eur 899,-",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: GoogleFonts
-                                                              .montserrat(
-                                                            fontStyle: FontStyle
-                                                                .italic,
-                                                            color: Colors.white,
-                                                            fontWeight:
-                                                                FontWeight.w100,
-                                                            fontSize: 20,
-                                                            //overflow: TextOverflow.visible,
-                                                          ),
-                                                        ),
-                                                      ],
+                                            ? Container(
+                                                height: MediaQuery.of(context)
+                                                    .size
+                                                    .height,
+                                                decoration: BoxDecoration(
+                                                    // image: DecorationImage(
+                                                    //   image:
+                                                    //       MediaQuery.of(context).orientation == Orientation.landscape
+                                                    //           ? Svg("DeskTopViewBannerSvg.svg")
+                                                    //           : mobile,
+                                                    //   fit: BoxFit.cover,
+                                                    //   colorFilter: const ColorFilter.mode(
+                                                    //     Color.fromARGB(204, 0, 0, 0),
+                                                    //     BlendMode.darken,
+                                                    //   ),
+                                                    // ),
+                                                    // gradient: LinearGradient(
+                                                    //   colors: [
+                                                    //     Color.fromARGB(
+                                                    //         255, 5, 18, 34),
+                                                    //     // Color.fromARGB(255, 77, 77, 77),
+                                                    //     // Color.fromARGB(255, 77, 77, 77),
+                                                    //     Color.fromARGB(
+                                                    //         255, 43, 82, 128),
+                                                    //   ],
+                                                    // ),
                                                     ),
+                                                child: Container(
+                                                  padding: EdgeInsets.only(
+                                                    left: 10,
+                                                    right: 10,
                                                   ),
-                                                  Container(
-                                                    padding: EdgeInsets.only(
-                                                      top: 20,
-                                                    ),
-                                                    child: ElevatedButton.icon(
-                                                      style: ElevatedButton
-                                                          .styleFrom(
-                                                              elevation: 10,
-                                                              primary:
-                                                                  Colors.blue,
-                                                              shape:
-                                                                  RoundedRectangleBorder(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            20),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Container(
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                          top: 100,
+                                                          bottom: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .height *
+                                                              0.45,
+                                                          left: 20,
+                                                        ),
+                                                        child: Center(
+                                                          child: Column(
+                                                            children: [
+                                                              AnimatedTextKit(
+                                                                repeatForever:
+                                                                    true,
+
+                                                                onNext: (stage,
+                                                                    done) {},
+                                                                animatedTexts: [
+                                                                  TyperAnimatedText(
+                                                                    "Bring your mobile app ideas to life.",
+                                                                    textStyle:
+                                                                        TextStyle(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          70,
+                                                                      //overflow: TextOverflow.visible,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    speed: const Duration(
+                                                                        milliseconds:
+                                                                            70),
+                                                                  ),
+                                                                  FadeAnimatedText(
+                                                                    "Specify",
+                                                                    textStyle:
+                                                                        GoogleFonts
+                                                                            .montserrat(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w100,
+                                                                      fontSize:
+                                                                          40,
+                                                                      //overflow: TextOverflow.visible,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                  ),
+                                                                  FadeAnimatedText(
+                                                                    "Design",
+                                                                    textStyle:
+                                                                        GoogleFonts
+                                                                            .montserrat(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w100,
+                                                                      fontSize:
+                                                                          40,
+                                                                      //overflow: TextOverflow.visible,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                  ),
+                                                                  FadeAnimatedText(
+                                                                    "Build",
+                                                                    textStyle:
+                                                                        GoogleFonts
+                                                                            .montserrat(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w100,
+                                                                      fontSize:
+                                                                          40,
+                                                                      //overflow: TextOverflow.visible,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                  )
+                                                                ],
+                                                                // onFinished: () {
+                                                                //   Navigator.pushNamed(
+                                                                //     context,
+                                                                //     '/home',
+                                                                //   );
+                                                                // },
                                                               ),
-                                                              minimumSize: Size(
-                                                                  200, 50)),
-                                                      onPressed: () {
-                                                        Navigator.pushNamed(
-                                                          context,
-                                                          '/home',
-                                                        );
-                                                      },
-                                                      icon: Icon(
-                                                        Icons.arrow_forward,
-                                                      ),
-                                                      label: Text(
-                                                        "Build Now!",
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                                //fontSize: 50,
-                                                                //fontWeight: FontWeight.w900,
+                                                              //     Container(
+                                                              //       padding: EdgeInsets.only(
+                                                              //   top: 20,
+                                                              // ),
+                                                              // child: ,
+                                                              //     )
+                                                              Container(
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .only(
+                                                                  top: 20,
                                                                 ),
+                                                                child:
+                                                                    ElevatedButton
+                                                                        .icon(
+                                                                  style: ElevatedButton
+                                                                      .styleFrom(
+                                                                          elevation:
+                                                                              10,
+                                                                          primary: Colors
+                                                                              .blue,
+                                                                          shape:
+                                                                              RoundedRectangleBorder(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(20),
+                                                                          ),
+                                                                          minimumSize: Size(
+                                                                              200,
+                                                                              50)),
+                                                                  onPressed:
+                                                                      goToContactForm,
+                                                                  onHover:
+                                                                      (hover) {
+                                                                    setState(
+                                                                        () {
+                                                                      aboutToClick =
+                                                                          hover;
+                                                                    });
+                                                                  },
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .arrow_forward,
+                                                                  ),
+                                                                  label: aboutToClick
+                                                                      ? AnimatedTextKit(
+                                                                          totalRepeatCount:
+                                                                              1,
+                                                                          animatedTexts: [
+                                                                            TyperAnimatedText(
+                                                                              "Build Now!",
+                                                                              textStyle: GoogleFonts.montserrat(
+                                                                                //fontSize: 50,
+                                                                                fontWeight: FontWeight.w900,
+                                                                              ),
+                                                                              speed: const Duration(milliseconds: 50),
+                                                                            )
+                                                                          ],
+                                                                        )
+                                                                      : Text(
+                                                                          "Build Now!",
+                                                                          style:
+                                                                              GoogleFonts.montserrat(
+                                                                            //fontSize: 50,
+                                                                            fontWeight:
+                                                                                FontWeight.w900,
+                                                                          ),
+                                                                        ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
-                                                    ),
+                                                    ],
                                                   ),
-                                                ],
+                                                ),
                                               )
                                             : Column(
                                                 children: [
@@ -1094,7 +1216,7 @@ class _HomePageState extends State<HomePage> {
                                                   Container(
                                                     padding: EdgeInsets.all(50),
                                                     child: Text(
-                                                      "Let's code! building for web, mobile or both? Let us finally get down to it. Turn your solution into a functional working application.",
+                                                      "Let's code! building for web, mobile or both? Let us finally get down to it. Turn your solution into a functional working application.\n\nGitHub is your friend. Deploy to both the AppStore ,PlayStore and, if necessary, receive the code base on GitHub.",
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: GoogleFonts
@@ -1126,12 +1248,8 @@ class _HomePageState extends State<HomePage> {
                                                               ),
                                                               minimumSize: Size(
                                                                   200, 50)),
-                                                      onPressed: () {
-                                                        Navigator.pushNamed(
-                                                          context,
-                                                          '/home',
-                                                        );
-                                                      },
+                                                      onPressed:
+                                                          goToContactForm,
                                                       icon: Icon(
                                                         Icons.arrow_forward,
                                                       ),
@@ -1395,12 +1513,7 @@ class _HomePageState extends State<HomePage> {
                                                           ),
                                                           minimumSize:
                                                               Size(200, 50)),
-                                                  onPressed: () {
-                                                    Navigator.pushNamed(
-                                                      context,
-                                                      '/home',
-                                                    );
-                                                  },
+                                                  onPressed: goToContactForm,
                                                   icon: Icon(
                                                     Icons.arrow_forward,
                                                   ),
@@ -1533,12 +1646,7 @@ class _HomePageState extends State<HomePage> {
                                                           ),
                                                           minimumSize:
                                                               Size(200, 50)),
-                                                  onPressed: () {
-                                                    Navigator.pushNamed(
-                                                      context,
-                                                      '/home',
-                                                    );
-                                                  },
+                                                  onPressed: goToContactForm,
                                                   icon: Icon(
                                                     Icons.arrow_forward,
                                                   ),
@@ -1676,12 +1784,7 @@ class _HomePageState extends State<HomePage> {
                                                           ),
                                                           minimumSize:
                                                               Size(200, 50)),
-                                                  onPressed: () {
-                                                    Navigator.pushNamed(
-                                                      context,
-                                                      '/home',
-                                                    );
-                                                  },
+                                                  onPressed: goToContactForm,
                                                   icon: Icon(
                                                     Icons.arrow_forward,
                                                   ),
