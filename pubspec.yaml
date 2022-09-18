@@ -44,6 +44,7 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   firebase_storage: ^10.3.2
   scroll_to_index: ^3.0.1
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

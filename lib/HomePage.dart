@@ -3,6 +3,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:buildnow/build_now_icons_icons.dart';
 import 'package:buildnow/linkedIn.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +28,9 @@ class _HomePageState extends State<HomePage> {
   final AutoScrollController _scrollController =
       AutoScrollController(axis: Axis.vertical);
 
-  void goToContactForm() {}
+  void goToContactForm() {
+    Navigator.pushNamed(context, '/Contact');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                                             textAlign: TextAlign.center,
                                             style: GoogleFonts.montserrat(
                                               color: Colors.white,
-                                              fontWeight: FontWeight.w100,
+                                              fontWeight: FontWeight.w300,
                                               fontSize: 20,
                                               //overflow: TextOverflow.visible,
                                             ),
@@ -518,7 +521,7 @@ class _HomePageState extends State<HomePage> {
                                     padding: EdgeInsets.only(top: 10),
                                     child: ListTile(
                                       leading: Icon(
-                                        FontAwesomeIcons.phone,
+                                        CupertinoIcons.phone,
                                         color:
                                             Color.fromARGB(100, 255, 255, 255),
                                       ),
@@ -2278,7 +2281,7 @@ class _HomePageState extends State<HomePage> {
                                 padding: EdgeInsets.only(top: 10),
                                 child: ListTile(
                                   leading: Icon(
-                                    FontAwesomeIcons.phone,
+                                    CupertinoIcons.phone,
                                     color: Color.fromARGB(100, 255, 255, 255),
                                   ),
                                   title: Text(
