@@ -707,29 +707,29 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                             ),
                                             Text(
-                                              "Eur 199,-",
-                                              textAlign: TextAlign.center,
-                                              style: GoogleFonts.montserrat(
-                                                  fontStyle: FontStyle.italic,
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.normal,
-                                                  fontSize: 20,
-                                                  decoration:
-                                                      TextDecoration.lineThrough
-                                                  //overflow: TextOverflow.visible,
-                                                  ),
-                                            ),
-                                            Text(
-                                              "Free",
+                                              "199€",
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.montserrat(
                                                 fontStyle: FontStyle.italic,
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.normal,
                                                 fontSize: 20,
+                                                // decoration:
+                                                //     TextDecoration.lineThrough
                                                 //overflow: TextOverflow.visible,
                                               ),
-                                            )
+                                            ),
+                                            // Text(
+                                            //   "Free",
+                                            //   textAlign: TextAlign.center,
+                                            //   style: GoogleFonts.montserrat(
+                                            //     fontStyle: FontStyle.italic,
+                                            //     color: Colors.white,
+                                            //     fontWeight: FontWeight.normal,
+                                            //     fontSize: 20,
+                                            //     //overflow: TextOverflow.visible,
+                                            //   ),
+                                            // )
                                           ],
                                         ),
                                       ),
@@ -836,23 +836,23 @@ class _HomePageState extends State<HomePage> {
                                                     fontSize: 20,
                                                   ),
                                                 ),
+                                                // Text(
+                                                //   "Eur 599,-",
+                                                //   textAlign: TextAlign.center,
+                                                //   style: GoogleFonts.montserrat(
+                                                //       fontStyle:
+                                                //           FontStyle.italic,
+                                                //       color: Colors.white,
+                                                //       fontWeight:
+                                                //           FontWeight.normal,
+                                                //       fontSize: 20,
+                                                //       decoration: TextDecoration
+                                                //           .lineThrough
+                                                //       //overflow: TextOverflow.visible,
+                                                //       ),
+                                                // ),
                                                 Text(
-                                                  "Eur 599,-",
-                                                  textAlign: TextAlign.center,
-                                                  style: GoogleFonts.montserrat(
-                                                      fontStyle:
-                                                          FontStyle.italic,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontSize: 20,
-                                                      decoration: TextDecoration
-                                                          .lineThrough
-                                                      //overflow: TextOverflow.visible,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  "Eur 299,-",
+                                                  "299€",
                                                   textAlign: TextAlign.center,
                                                   style: GoogleFonts.montserrat(
                                                     fontStyle: FontStyle.italic,
@@ -1330,27 +1330,7 @@ class _HomePageState extends State<HomePage> {
                                                           ),
                                                         ),
                                                         Text(
-                                                          "Eur 1999,-",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: GoogleFonts.montserrat(
-                                                              fontStyle:
-                                                                  FontStyle
-                                                                      .italic,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal,
-                                                              fontSize: 20,
-                                                              decoration:
-                                                                  TextDecoration
-                                                                      .lineThrough
-                                                              //overflow: TextOverflow.visible,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          "Eur 999,-",
+                                                          "1999€",
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: GoogleFonts
@@ -1362,9 +1342,28 @@ class _HomePageState extends State<HomePage> {
                                                                 FontWeight
                                                                     .normal,
                                                             fontSize: 20,
+                                                            // decoration:
+                                                            //     TextDecoration
+                                                            //         .lineThrough
                                                             //overflow: TextOverflow.visible,
                                                           ),
-                                                        )
+                                                        ),
+                                                        // Text(
+                                                        //   "Eur 999,-",
+                                                        //   textAlign:
+                                                        //       TextAlign.center,
+                                                        //   style: GoogleFonts
+                                                        //       .montserrat(
+                                                        //     fontStyle: FontStyle
+                                                        //         .italic,
+                                                        //     color: Colors.white,
+                                                        //     fontWeight:
+                                                        //         FontWeight
+                                                        //             .normal,
+                                                        //     fontSize: 20,
+                                                        //     //overflow: TextOverflow.visible,
+                                                        //   ),
+                                                        // )
                                                       ],
                                                     ),
                                                   ),
@@ -1655,7 +1654,7 @@ class _HomePageState extends State<HomePage> {
                                                         ),
                                                       ),
                                                       Text(
-                                                        "Eur 199,-",
+                                                        "199€",
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: GoogleFonts.montserrat(
@@ -1672,21 +1671,21 @@ class _HomePageState extends State<HomePage> {
                                                             //overflow: TextOverflow.visible,
                                                             ),
                                                       ),
-                                                      Text(
-                                                        "Free",
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                          fontStyle:
-                                                              FontStyle.italic,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          fontSize: 20,
-                                                          //overflow: TextOverflow.visible,
-                                                        ),
-                                                      )
+                                                      // Text(
+                                                      //   "Free",
+                                                      //   textAlign:
+                                                      //       TextAlign.center,
+                                                      //   style: GoogleFonts
+                                                      //       .montserrat(
+                                                      //     fontStyle:
+                                                      //         FontStyle.italic,
+                                                      //     color: Colors.white,
+                                                      //     fontWeight:
+                                                      //         FontWeight.normal,
+                                                      //     fontSize: 20,
+                                                      //     //overflow: TextOverflow.visible,
+                                                      //   ),
+                                                      // )
                                                     ],
                                                   ),
                                                 ),
@@ -1859,26 +1858,26 @@ class _HomePageState extends State<HomePage> {
                                                           fontSize: 20,
                                                         ),
                                                       ),
+                                                      // Text(
+                                                      //   "Eur 599,-",
+                                                      //   textAlign:
+                                                      //       TextAlign.center,
+                                                      //   style: GoogleFonts.montserrat(
+                                                      //       fontStyle: FontStyle
+                                                      //           .italic,
+                                                      //       color: Colors.white,
+                                                      //       fontWeight:
+                                                      //           FontWeight
+                                                      //               .normal,
+                                                      //       fontSize: 20,
+                                                      //       decoration:
+                                                      //           TextDecoration
+                                                      //               .lineThrough
+                                                      //       //overflow: TextOverflow.visible,
+                                                      //       ),
+                                                      // ),
                                                       Text(
-                                                        "Eur 599,-",
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: GoogleFonts.montserrat(
-                                                            fontStyle: FontStyle
-                                                                .italic,
-                                                            color: Colors.white,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            fontSize: 20,
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .lineThrough
-                                                            //overflow: TextOverflow.visible,
-                                                            ),
-                                                      ),
-                                                      Text(
-                                                        "Eur 299,-",
+                                                        "299€",
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: GoogleFonts
@@ -2071,25 +2070,7 @@ class _HomePageState extends State<HomePage> {
                                                         ),
                                                       ),
                                                       Text(
-                                                        "Eur 1999,-",
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: GoogleFonts.montserrat(
-                                                            fontStyle: FontStyle
-                                                                .italic,
-                                                            color: Colors.white,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            fontSize: 20,
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .lineThrough
-                                                            //overflow: TextOverflow.visible,
-                                                            ),
-                                                      ),
-                                                      Text(
-                                                        "Eur 999,-",
+                                                        "Eur 1999€",
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: GoogleFonts
@@ -2100,9 +2081,27 @@ class _HomePageState extends State<HomePage> {
                                                           fontWeight:
                                                               FontWeight.normal,
                                                           fontSize: 20,
+                                                          // decoration:
+                                                          //     TextDecoration
+                                                          //         .lineThrough
                                                           //overflow: TextOverflow.visible,
                                                         ),
-                                                      )
+                                                      ),
+                                                      // Text(
+                                                      //   "Eur 999,-",
+                                                      //   textAlign:
+                                                      //       TextAlign.center,
+                                                      //   style: GoogleFonts
+                                                      //       .montserrat(
+                                                      //     fontStyle:
+                                                      //         FontStyle.italic,
+                                                      //     color: Colors.white,
+                                                      //     fontWeight:
+                                                      //         FontWeight.normal,
+                                                      //     fontSize: 20,
+                                                      //     //overflow: TextOverflow.visible,
+                                                      //   ),
+                                                      // )
                                                     ],
                                                   ),
                                                 ),
