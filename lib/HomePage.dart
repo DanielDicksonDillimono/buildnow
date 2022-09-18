@@ -1657,19 +1657,19 @@ class _HomePageState extends State<HomePage> {
                                                         "199€",
                                                         textAlign:
                                                             TextAlign.center,
-                                                        style: GoogleFonts.montserrat(
-                                                            fontStyle: FontStyle
-                                                                .italic,
-                                                            color: Colors.white,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            fontSize: 20,
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .lineThrough
-                                                            //overflow: TextOverflow.visible,
-                                                            ),
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          fontSize: 20,
+                                                          // decoration:
+                                                          //     TextDecoration
+                                                          //         .lineThrough
+                                                          //overflow: TextOverflow.visible,
+                                                        ),
                                                       ),
                                                       // Text(
                                                       //   "Free",
@@ -2328,7 +2328,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.montserrat(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w100,
+                                          fontWeight: FontWeight.w300,
                                           fontSize: 15,
                                           //overflow: TextOverflow.visible,
                                         ),
@@ -2338,7 +2338,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.montserrat(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w100,
+                                          fontWeight: FontWeight.w300,
                                           fontSize: 15,
                                           //overflow: TextOverflow.visible,
                                         ),
