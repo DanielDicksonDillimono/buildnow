@@ -95,17 +95,6 @@ class _HomePageState extends State<HomePage> {
                                               //overflow: TextOverflow.visible,
                                             ),
                                           ),
-                                          Text(
-                                            "From: Eur 899,-",
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.montserrat(
-                                              fontStyle: FontStyle.italic,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 20,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                          ),
                                         ],
                                       ),
                                     )
@@ -700,6 +689,48 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       Container(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Text(
+                                              "From:",
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.montserrat(
+                                                fontStyle: FontStyle.italic,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w100,
+                                                fontSize: 20,
+                                              ),
+                                            ),
+                                            Text(
+                                              "Eur 199,-",
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.montserrat(
+                                                  fontStyle: FontStyle.italic,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal,
+                                                  fontSize: 20,
+                                                  decoration:
+                                                      TextDecoration.lineThrough
+                                                  //overflow: TextOverflow.visible,
+                                                  ),
+                                            ),
+                                            Text(
+                                              "Free",
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.montserrat(
+                                                fontStyle: FontStyle.italic,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 20,
+                                                //overflow: TextOverflow.visible,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
                                         padding: EdgeInsets.only(
                                           top: 20,
                                         ),
@@ -781,10 +812,55 @@ class _HomePageState extends State<HomePage> {
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.montserrat(
                                                 color: Colors.white,
-                                                fontWeight: FontWeight.w100,
+                                                fontWeight: FontWeight.w300,
                                                 fontSize: 20,
                                                 //overflow: TextOverflow.visible,
                                               ),
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: EdgeInsets.only(top: 10),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Text(
+                                                  "From:",
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts.montserrat(
+                                                    fontStyle: FontStyle.italic,
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.w100,
+                                                    fontSize: 20,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "Eur 599,-",
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts.montserrat(
+                                                      fontStyle:
+                                                          FontStyle.italic,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      fontSize: 20,
+                                                      decoration: TextDecoration
+                                                          .lineThrough
+                                                      //overflow: TextOverflow.visible,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  "Eur 299,-",
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts.montserrat(
+                                                    fontStyle: FontStyle.italic,
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    fontSize: 20,
+                                                    //overflow: TextOverflow.visible,
+                                                  ),
+                                                )
+                                              ],
                                             ),
                                           ),
                                           Container(
@@ -1223,10 +1299,70 @@ class _HomePageState extends State<HomePage> {
                                                           .montserrat(
                                                         color: Colors.white,
                                                         fontWeight:
-                                                            FontWeight.w100,
+                                                            FontWeight.w300,
                                                         fontSize: 20,
                                                         //overflow: TextOverflow.visible,
                                                       ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    padding: EdgeInsets.only(
+                                                        top: 10),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: [
+                                                        Text(
+                                                          "From:",
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: GoogleFonts
+                                                              .montserrat(
+                                                            fontStyle: FontStyle
+                                                                .italic,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight.w300,
+                                                            fontSize: 20,
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          "Eur 1999,-",
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: GoogleFonts.montserrat(
+                                                              fontStyle:
+                                                                  FontStyle
+                                                                      .italic,
+                                                              color:
+                                                                  Colors.white,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                              fontSize: 20,
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .lineThrough
+                                                              //overflow: TextOverflow.visible,
+                                                              ),
+                                                        ),
+                                                        Text(
+                                                          "Eur 999,-",
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: GoogleFonts
+                                                              .montserrat(
+                                                            fontStyle: FontStyle
+                                                                .italic,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 20,
+                                                            //overflow: TextOverflow.visible,
+                                                          ),
+                                                        )
+                                                      ],
                                                     ),
                                                   ),
                                                   Container(
@@ -1290,6 +1426,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: SingleChildScrollView(
+                controller: _scrollController,
                 child: SizedBox(
                   height: null,
                   child: Column(
@@ -1309,15 +1446,18 @@ class _HomePageState extends State<HomePage> {
                             },
                             child: Column(
                               children: [
-                                CircleAvatar(
-                                  backgroundImage: Image.asset(
-                                    "BuildNowAppIcon.png",
-                                  ).image,
-                                  radius:
-                                      MediaQuery.of(context).size.width * 0.05,
+                                Container(
+                                  padding: EdgeInsets.only(top: 10),
+                                  child: CircleAvatar(
+                                    backgroundImage: Image.asset(
+                                      "BuildNowAppIcon.png",
+                                    ).image,
+                                    radius: MediaQuery.of(context).size.width *
+                                        0.05,
+                                  ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.only(top: 5),
+                                  padding: EdgeInsets.only(top: 5, bottom: 10),
                                   child: Text(
                                     "BuildNOW",
                                     style: GoogleFonts.montserrat(
@@ -1329,7 +1469,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.only(top: 10),
+                                  padding: EdgeInsets.only(top: 20),
                                   child: Column(
                                     children: [
                                       Text(
@@ -1337,18 +1477,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.montserrat(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w100,
-                                          fontSize: 20,
-                                          //overflow: TextOverflow.visible,
-                                        ),
-                                      ),
-                                      Text(
-                                        "From: Eur 899,-",
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.montserrat(
-                                          fontStyle: FontStyle.italic,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w100,
+                                          fontWeight: FontWeight.w300,
                                           fontSize: 20,
                                           //overflow: TextOverflow.visible,
                                         ),
@@ -1408,7 +1537,7 @@ class _HomePageState extends State<HomePage> {
                               setState(() {
                                 selectedStage = Stages.specify;
                                 _scrollController.scrollToIndex(
-                                  Stages.build.index,
+                                  Stages.specify.index,
                                 );
                               });
                             },
@@ -1492,13 +1621,70 @@ class _HomePageState extends State<HomePage> {
                                                           : Color.fromARGB(100,
                                                               255, 255, 255),
                                                       fontWeight:
-                                                          FontWeight.w100,
+                                                          FontWeight.w300,
                                                       fontSize: selectedStage ==
                                                               Stages.specify
                                                           ? 20
                                                           : 15,
                                                       //overflow: TextOverflow.visible,
                                                     ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(top: 10),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Text(
+                                                        "From:",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          fontSize: 20,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        "Eur 199,-",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts.montserrat(
+                                                            fontStyle: FontStyle
+                                                                .italic,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 20,
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough
+                                                            //overflow: TextOverflow.visible,
+                                                            ),
+                                                      ),
+                                                      Text(
+                                                        "Free",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          fontSize: 20,
+                                                          //overflow: TextOverflow.visible,
+                                                        ),
+                                                      )
+                                                    ],
                                                   ),
                                                 ),
                                                 Container(
@@ -1525,7 +1711,7 @@ class _HomePageState extends State<HomePage> {
                                                       Icons.arrow_forward,
                                                     ),
                                                     label: Text(
-                                                      "Build Now!",
+                                                      "Specify Now!",
                                                       style: GoogleFonts.montserrat(
                                                           //fontSize: 50,
                                                           //fontWeight: FontWeight.w900,
@@ -1551,14 +1737,14 @@ class _HomePageState extends State<HomePage> {
                         controller: _scrollController,
                         index: Stages.design.index,
                         child: Container(
-                          padding: EdgeInsets.only(top: 20),
+                          padding: EdgeInsets.only(top: 50),
                           width: MediaQuery.of(context).size.width * 0.95,
                           child: InkWell(
                             onTap: () {
                               setState(() {
                                 selectedStage = Stages.design;
                                 _scrollController
-                                    .scrollToIndex(Stages.me.index);
+                                    .scrollToIndex(Stages.design.index);
                               });
                             },
                             child: Card(
@@ -1640,13 +1826,70 @@ class _HomePageState extends State<HomePage> {
                                                           : Color.fromARGB(100,
                                                               255, 255, 255),
                                                       fontWeight:
-                                                          FontWeight.w100,
+                                                          FontWeight.w300,
                                                       fontSize: selectedStage ==
                                                               Stages.design
                                                           ? 20
                                                           : 15,
                                                       //overflow: TextOverflow.visible,
                                                     ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(top: 10),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Text(
+                                                        "From:",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          fontSize: 20,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        "Eur 599,-",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts.montserrat(
+                                                            fontStyle: FontStyle
+                                                                .italic,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 20,
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough
+                                                            //overflow: TextOverflow.visible,
+                                                            ),
+                                                      ),
+                                                      Text(
+                                                        "Eur 299,-",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          fontSize: 20,
+                                                          //overflow: TextOverflow.visible,
+                                                        ),
+                                                      )
+                                                    ],
                                                   ),
                                                 ),
                                                 Container(
@@ -1673,7 +1916,7 @@ class _HomePageState extends State<HomePage> {
                                                       Icons.arrow_forward,
                                                     ),
                                                     label: Text(
-                                                      "Build Now!",
+                                                      "Design Now!",
                                                       style: GoogleFonts.montserrat(
                                                           //fontSize: 50,
                                                           //fontWeight: FontWeight.w900,
@@ -1700,7 +1943,7 @@ class _HomePageState extends State<HomePage> {
                         index: Stages.implement.index,
                         child: Container(
                           padding: EdgeInsets.only(
-                            top: 20,
+                            top: 50,
                             bottom: 20,
                           ),
                           width: MediaQuery.of(context).size.width * 0.95,
@@ -1709,7 +1952,8 @@ class _HomePageState extends State<HomePage> {
                               setState(
                                 () {
                                   selectedStage = Stages.implement;
-                                  _scrollController.scrollToIndex(5);
+                                  _scrollController
+                                      .scrollToIndex(Stages.implement.index);
                                 },
                               );
                             },
@@ -1781,7 +2025,7 @@ class _HomePageState extends State<HomePage> {
                                               children: [
                                                 Container(
                                                   padding:
-                                                      EdgeInsets.only(top: 10),
+                                                      EdgeInsets.only(top: 50),
                                                   child: Text(
                                                     "Let's code! building for web, mobile or both? Let us finally get down to it. Turn your solution into a functional working application.\n\nGitHub is your friend. Deploy to both the AppStore ,PlayStore and, if necessary, receive the code base on GitHub.",
                                                     textAlign: TextAlign.center,
@@ -1793,13 +2037,70 @@ class _HomePageState extends State<HomePage> {
                                                           : Color.fromARGB(100,
                                                               255, 255, 255),
                                                       fontWeight:
-                                                          FontWeight.w100,
+                                                          FontWeight.w300,
                                                       fontSize: selectedStage ==
                                                               Stages.implement
                                                           ? 20
                                                           : 15,
                                                       //overflow: TextOverflow.visible,
                                                     ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(top: 10),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Text(
+                                                        "From:",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.w300,
+                                                          fontSize: 20,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        "Eur 1999,-",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts.montserrat(
+                                                            fontStyle: FontStyle
+                                                                .italic,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontSize: 20,
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .lineThrough
+                                                            //overflow: TextOverflow.visible,
+                                                            ),
+                                                      ),
+                                                      Text(
+                                                        "Eur 999,-",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: GoogleFonts
+                                                            .montserrat(
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          fontSize: 20,
+                                                          //overflow: TextOverflow.visible,
+                                                        ),
+                                                      )
+                                                    ],
                                                   ),
                                                 ),
                                                 Container(
@@ -1854,108 +2155,112 @@ class _HomePageState extends State<HomePage> {
                       ),
 
                       //Me card
-                      AutoScrollTag(
-                        key: Key("ScrollPosMobMe"),
-                        controller: _scrollController,
-                        index: Stages.me.index,
-                        child: Center(
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            // decoration: BoxDecoration(
-                            //   shape: BoxShape.circle,
-                            //   color: Colors.white,
-                            // ),
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundImage: Image.asset("me.jpg").image,
-                                  radius:
-                                      MediaQuery.of(context).size.width * 0.20,
-                                ),
-                                Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    "Flutter Developer <>",
-                                    style: GoogleFonts.montserrat(
-                                      color: Colors.white,
+                      Container(
+                        padding: EdgeInsets.only(top: 50),
+                        child: AutoScrollTag(
+                          key: Key("ScrollPosMobMe"),
+                          controller: _scrollController,
+                          index: Stages.me.index,
+                          child: Center(
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              // decoration: BoxDecoration(
+                              //   shape: BoxShape.circle,
+                              //   color: Colors.white,
+                              // ),
+                              child: Column(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundImage:
+                                        Image.asset("me.jpg").image,
+                                    radius: MediaQuery.of(context).size.width *
+                                        0.20,
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      "Flutter Developer <>",
+                                      style: GoogleFonts.montserrat(
+                                        color: Colors.white,
 
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      //overflow: TextOverflow.visible,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        //overflow: TextOverflow.visible,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    "Hi my name is Daniel Dickson Dillimono, Daniel for short. I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Always ready to brainstorm your ideas, design them and bring them to reality in mobile, web or desktop form. Do not wait, reachout and let's BUILDNOW!",
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.montserrat(
-                                      color: Colors.white,
+                                  Container(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      "Hi my name is Daniel Dickson Dillimono. I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Always ready to brainstorm your ideas, design them and bring them to reality in mobile, web or desktop form. Do not wait, reachout and let's BUILDNOW!",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.montserrat(
+                                        color: Colors.white,
 
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 15,
-                                      //overflow: TextOverflow.visible,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  //width: double.infinity,
-                                  padding: EdgeInsets.only(
-                                    top: 20,
-                                  ),
-                                  child: ListTile(
-                                    leading: Icon(
-                                      LinkedIn.linkedin,
-                                      color: Colors.white,
-                                    ),
-                                    title: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 10,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 15,
+                                        //overflow: TextOverflow.visible,
                                       ),
-                                      child: Text(
-                                        "Follow me on LinkedIn",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          //fontWeight: FontWeight.,
+                                    ),
+                                  ),
+                                  Container(
+                                    //width: double.infinity,
+                                    padding: EdgeInsets.only(
+                                      top: 40,
+                                    ),
+                                    child: ListTile(
+                                      leading: Icon(
+                                        LinkedIn.linkedin,
+                                        color: Colors.white,
+                                      ),
+                                      title: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 10,
                                         ),
-                                      ),
-                                      onPressed: () {
-                                        launchUrl(Uri.parse(
-                                            "https://nl.linkedin.com/in/daniel-dickson-dillimono"));
-                                      },
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  //width: double.infinity,
-                                  padding: EdgeInsets.only(
-                                    top: 20,
-                                  ),
-                                  child: ListTile(
-                                    leading: Icon(
-                                      LinkedIn.linkedin,
-                                      color: Colors.white,
-                                    ),
-                                    title: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 10,
-                                      ),
-                                      child: Text(
-                                        "Follow BuildNow on LinkedIn",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          //fontWeight: FontWeight.,
+                                        child: Text(
+                                          "Follow me on LinkedIn",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            //fontWeight: FontWeight.,
+                                          ),
                                         ),
+                                        onPressed: () {
+                                          launchUrl(Uri.parse(
+                                              "https://nl.linkedin.com/in/daniel-dickson-dillimono"));
+                                        },
                                       ),
-                                      onPressed: () {
-                                        launchUrl(Uri.parse(
-                                            "https://www.linkedin.com/showcase/buildnowbydeeformed/?viewAsMember=true"));
-                                      },
                                     ),
                                   ),
-                                ),
-                              ],
+                                  Container(
+                                    //width: double.infinity,
+                                    padding: EdgeInsets.only(
+                                      top: 20,
+                                    ),
+                                    child: ListTile(
+                                      leading: Icon(
+                                        LinkedIn.linkedin,
+                                        color: Colors.white,
+                                      ),
+                                      title: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 10,
+                                        ),
+                                        child: Text(
+                                          "Follow BuildNow on LinkedIn",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            //fontWeight: FontWeight.,
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          launchUrl(Uri.parse(
+                                              "https://www.linkedin.com/showcase/buildnowbydeeformed/?viewAsMember=true"));
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -1981,7 +2286,7 @@ class _HomePageState extends State<HomePage> {
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.montserrat(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.w100,
+                                      fontWeight: FontWeight.w300,
                                       fontSize: 15,
                                       //overflow: TextOverflow.visible,
                                     ),
@@ -2000,7 +2305,7 @@ class _HomePageState extends State<HomePage> {
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.montserrat(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.w100,
+                                      fontWeight: FontWeight.w300,
                                       fontSize: 15,
                                       //overflow: TextOverflow.visible,
                                     ),
