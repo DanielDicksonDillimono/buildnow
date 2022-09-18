@@ -43,6 +43,7 @@ dependencies:
   flutter_svg: ^1.1.1+1
   flutter_svg_provider: ^1.0.3
   firebase_storage: ^10.3.2
+  scroll_to_index: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -69,15 +70,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - BuildNowAppIcon.png
-    - Build.png
-    - Design.svg
-    - Specify.png
-    - phone.jpg
+
     - Banner.jpg
     - BuildNowWebsiteBanner.png
-    - MobileView.png
-    - DeskTopView.png
-    - DeskTopViewBannerSvg.svg
+
     - variationTwo.svg
     - me.jpg
     - pic.svg
@@ -87,6 +83,7 @@ flutter:
     - coding.jpeg
     - Ui.jpeg
     - Goals.jpeg
+    - AppImage.PNG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
