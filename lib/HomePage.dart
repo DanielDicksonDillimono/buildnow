@@ -24,6 +24,7 @@ enum Stages { build, specify, design, implement, me }
 class _HomePageState extends State<HomePage> {
   bool aboutToClick = false;
   bool hoveringOver = false;
+  bool animationDone = false;
   Stages selectedStage = Stages.build;
   final AutoScrollController _scrollController =
       AutoScrollController(axis: Axis.vertical);
@@ -125,8 +126,8 @@ class _HomePageState extends State<HomePage> {
                                     "PATHWAY TO REALISATION",
                                     style: GoogleFonts.montserrat(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 23,
                                       //overflow: TextOverflow.visible,
                                     ),
                                   ),
@@ -530,7 +531,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.montserrat(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w100,
+                                          fontWeight: FontWeight.normal,
                                           fontSize: 15,
                                           //overflow: TextOverflow.visible,
                                         ),
@@ -550,7 +551,7 @@ class _HomePageState extends State<HomePage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.montserrat(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w100,
+                                          fontWeight: FontWeight.normal,
                                           fontSize: 15,
                                           //overflow: TextOverflow.visible,
                                         ),
@@ -573,7 +574,7 @@ class _HomePageState extends State<HomePage> {
                                             textAlign: TextAlign.center,
                                             style: GoogleFonts.montserrat(
                                               color: Colors.white,
-                                              fontWeight: FontWeight.w100,
+                                              fontWeight: FontWeight.normal,
                                               fontSize: 15,
                                               //overflow: TextOverflow.visible,
                                             ),
@@ -583,7 +584,7 @@ class _HomePageState extends State<HomePage> {
                                             textAlign: TextAlign.center,
                                             style: GoogleFonts.montserrat(
                                               color: Colors.white,
-                                              fontWeight: FontWeight.w100,
+                                              fontWeight: FontWeight.normal,
                                               fontSize: 15,
                                               //overflow: TextOverflow.visible,
                                             ),
@@ -685,7 +686,7 @@ class _HomePageState extends State<HomePage> {
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.montserrat(
                                             color: Colors.white,
-                                            fontWeight: FontWeight.w100,
+                                            fontWeight: FontWeight.w300,
                                             fontSize: 20,
                                             //overflow: TextOverflow.visible,
                                           ),
@@ -1023,28 +1024,29 @@ class _HomePageState extends State<HomePage> {
                                                     .size
                                                     .height,
                                                 decoration: BoxDecoration(
-                                                    // image: DecorationImage(
-                                                    //   image:
-                                                    //       MediaQuery.of(context).orientation == Orientation.landscape
-                                                    //           ? Svg("DeskTopViewBannerSvg.svg")
-                                                    //           : mobile,
-                                                    //   fit: BoxFit.cover,
-                                                    //   colorFilter: const ColorFilter.mode(
-                                                    //     Color.fromARGB(204, 0, 0, 0),
-                                                    //     BlendMode.darken,
-                                                    //   ),
-                                                    // ),
-                                                    // gradient: LinearGradient(
-                                                    //   colors: [
-                                                    //     Color.fromARGB(
-                                                    //         255, 5, 18, 34),
-                                                    //     // Color.fromARGB(255, 77, 77, 77),
-                                                    //     // Color.fromARGB(255, 77, 77, 77),
-                                                    //     Color.fromARGB(
-                                                    //         255, 43, 82, 128),
-                                                    //   ],
-                                                    // ),
+                                                  image: DecorationImage(
+                                                    image: Image.asset(
+                                                            "Banner.jpg")
+                                                        .image,
+                                                    fit: BoxFit.cover,
+                                                    colorFilter:
+                                                        const ColorFilter.mode(
+                                                      Color.fromARGB(
+                                                          204, 0, 0, 0),
+                                                      BlendMode.darken,
                                                     ),
+                                                  ),
+                                                  // gradient: LinearGradient(
+                                                  //   colors: [
+                                                  //     Color.fromARGB(
+                                                  //         255, 5, 18, 34),
+                                                  //     // Color.fromARGB(255, 77, 77, 77),
+                                                  //     // Color.fromARGB(255, 77, 77, 77),
+                                                  //     Color.fromARGB(
+                                                  //         255, 43, 82, 128),
+                                                  //   ],
+                                                  // ),
+                                                ),
                                                 child: Container(
                                                   padding: EdgeInsets.only(
                                                     left: 10,
@@ -1071,95 +1073,121 @@ class _HomePageState extends State<HomePage> {
                                                         child: Center(
                                                           child: Column(
                                                             children: [
-                                                              AnimatedTextKit(
-                                                                repeatForever:
-                                                                    true,
+                                                              animationDone
+                                                                  ? Column(
+                                                                      children: [
+                                                                          Text(
+                                                                            "Bring your mobile app ideas to life.",
+                                                                            style:
+                                                                                TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontWeight: FontWeight.bold,
+                                                                              fontSize: 70,
+                                                                              //overflow: TextOverflow.visible,
+                                                                            ),
+                                                                            textAlign:
+                                                                                TextAlign.center,
+                                                                          ),
+                                                                          Text(
+                                                                            "Specify | Design | Build",
+                                                                            style:
+                                                                                GoogleFonts.montserrat(
+                                                                              color: Colors.white,
+                                                                              fontWeight: FontWeight.w100,
+                                                                              fontSize: 40,
+                                                                              //overflow: TextOverflow.visible,
+                                                                            ),
+                                                                            textAlign:
+                                                                                TextAlign.center,
+                                                                          ),
+                                                                        ])
+                                                                  : AnimatedTextKit(
+                                                                      // repeatForever:
+                                                                      //     true,
+                                                                      totalRepeatCount:
+                                                                          2,
 
-                                                                onNext: (stage,
-                                                                    done) {},
-                                                                animatedTexts: [
-                                                                  TyperAnimatedText(
-                                                                    "Bring your mobile app ideas to life.",
-                                                                    textStyle:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                      fontSize:
-                                                                          70,
-                                                                      //overflow: TextOverflow.visible,
+                                                                      onNext: (stage,
+                                                                          done) {},
+                                                                      onFinished:
+                                                                          () {
+                                                                        setState(
+                                                                            () {
+                                                                          animationDone =
+                                                                              true;
+                                                                        });
+                                                                      },
+                                                                      animatedTexts: [
+                                                                        TyperAnimatedText(
+                                                                          "Bring your mobile app ideas to life.",
+                                                                          textStyle:
+                                                                              TextStyle(
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                            fontSize:
+                                                                                70,
+                                                                            //overflow: TextOverflow.visible,
+                                                                          ),
+                                                                          textAlign:
+                                                                              TextAlign.center,
+                                                                          speed:
+                                                                              const Duration(milliseconds: 70),
+                                                                        ),
+                                                                        FadeAnimatedText(
+                                                                          "Specify",
+                                                                          textStyle:
+                                                                              GoogleFonts.montserrat(
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight:
+                                                                                FontWeight.w100,
+                                                                            fontSize:
+                                                                                40,
+                                                                            //overflow: TextOverflow.visible,
+                                                                          ),
+                                                                          textAlign:
+                                                                              TextAlign.center,
+                                                                        ),
+                                                                        FadeAnimatedText(
+                                                                          "Design",
+                                                                          textStyle:
+                                                                              GoogleFonts.montserrat(
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight:
+                                                                                FontWeight.w100,
+                                                                            fontSize:
+                                                                                40,
+                                                                            //overflow: TextOverflow.visible,
+                                                                          ),
+                                                                          textAlign:
+                                                                              TextAlign.center,
+                                                                        ),
+                                                                        FadeAnimatedText(
+                                                                          "Build",
+                                                                          textStyle:
+                                                                              GoogleFonts.montserrat(
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight:
+                                                                                FontWeight.w100,
+                                                                            fontSize:
+                                                                                40,
+                                                                            //overflow: TextOverflow.visible,
+                                                                          ),
+                                                                          textAlign:
+                                                                              TextAlign.center,
+                                                                        )
+                                                                      ],
+                                                                      // onFinished: () {
+                                                                      //   Navigator.pushNamed(
+                                                                      //     context,
+                                                                      //     '/home',
+                                                                      //   );
+                                                                      // },
                                                                     ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .center,
-                                                                    speed: const Duration(
-                                                                        milliseconds:
-                                                                            70),
-                                                                  ),
-                                                                  FadeAnimatedText(
-                                                                    "Specify",
-                                                                    textStyle:
-                                                                        GoogleFonts
-                                                                            .montserrat(
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w100,
-                                                                      fontSize:
-                                                                          40,
-                                                                      //overflow: TextOverflow.visible,
-                                                                    ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .center,
-                                                                  ),
-                                                                  FadeAnimatedText(
-                                                                    "Design",
-                                                                    textStyle:
-                                                                        GoogleFonts
-                                                                            .montserrat(
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w100,
-                                                                      fontSize:
-                                                                          40,
-                                                                      //overflow: TextOverflow.visible,
-                                                                    ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .center,
-                                                                  ),
-                                                                  FadeAnimatedText(
-                                                                    "Build",
-                                                                    textStyle:
-                                                                        GoogleFonts
-                                                                            .montserrat(
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w100,
-                                                                      fontSize:
-                                                                          40,
-                                                                      //overflow: TextOverflow.visible,
-                                                                    ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .center,
-                                                                  )
-                                                                ],
-                                                                // onFinished: () {
-                                                                //   Navigator.pushNamed(
-                                                                //     context,
-                                                                //     '/home',
-                                                                //   );
-                                                                // },
-                                                              ),
                                                               //     Container(
                                                               //       padding: EdgeInsets.only(
                                                               //   top: 20,
@@ -1420,6 +1448,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           )
+
         //mobile block
         : Scaffold(
             body: Container(

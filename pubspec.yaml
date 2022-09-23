@@ -1,5 +1,5 @@
 name: buildnow
-description: Specify, desgin, Implement applications.
+description: Specify, desgin, Implement applications.\nStart the build-measure-learn cycle by turning your idea into a functional application. Enable rapid validation of your core idea.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -74,7 +74,6 @@ flutter:
 
     - Banner.jpg
     - BuildNowWebsiteBanner.png
-
     - variationTwo.svg
     - me.jpg
     - pic.svg
