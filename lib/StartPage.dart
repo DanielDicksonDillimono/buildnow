@@ -205,7 +205,7 @@ class _StartPageState extends State<StartPage>
                                 //         ],
                                 //       ) :
                                 AnimatedTextKit(
-                                  // pause: const Duration(milliseconds: 50),
+                                  pause: const Duration(milliseconds: 50),
                                   //repeatForever: true,
                                   totalRepeatCount: 1,
                                   onNext: (stage, done) {

@@ -73,17 +73,13 @@ flutter:
     - BuildNowAppIcon.png
 
     - Banner.jpg
-    - BuildNowWebsiteBanner.png
-    - variationTwo.svg
+
     - me.jpg
-    - pic.svg
-    - pic2.svg
-    - Play.png
-    - playT.png
+  
     - coding.jpeg
     - Ui.jpeg
     - Goals.jpeg
-    - AppImage.PNG
+    - lana.PNG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
