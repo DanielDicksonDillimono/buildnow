@@ -12,6 +12,15 @@ TextStyle subHeadingTextStyle = GoogleFonts.montserrat(
   //overflow: TextOverflow.visible,
 );
 
+ButtonStyle actionButtonStyle = ElevatedButton.styleFrom(
+  elevation: 10,
+  primary: Color.fromARGB(140, 0, 140, 255),
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(20),
+  ),
+  minimumSize: Size(200, 50),
+);
+
 //Color mainColor = Colors
 
 enum ImagePosition {

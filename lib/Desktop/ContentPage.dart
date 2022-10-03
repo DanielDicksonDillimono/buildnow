@@ -7,9 +7,7 @@ class ContentPage extends StatefulWidget {
   final String header;
   final ImagePosition imagePosition;
   final String content;
-  final Icon icon;
-  const ContentPage(this.header, this.content, this.icon, this.imagePosition,
-      {Key? key})
+  const ContentPage(this.header, this.content, this.imagePosition, {Key? key})
       : super(key: key);
 
   @override
@@ -109,57 +107,6 @@ class _ContentPageState extends State<ContentPage> {
                           ),
                         ],
                       ),
-                      // Container(
-                      //   padding: EdgeInsets.only(
-                      //     top: 20,
-                      //   ),
-                      //   child: ElevatedButton.icon(
-                      //     style: ElevatedButton.styleFrom(
-                      //         elevation: 10,
-                      //         primary: Colors.blue,
-                      //         shape: RoundedRectangleBorder(
-                      //           borderRadius:
-                      //               BorderRadius.circular(
-                      //                   20),
-                      //         ),
-                      //         minimumSize: Size(200, 50)),
-                      //     onPressed: goToContactForm,
-                      //     onHover: (hover) {
-                      //       setState(() {
-                      //         aboutToClick = hover;
-                      //       });
-                      //     },
-                      //     icon: Icon(
-                      //       Icons.arrow_forward,
-                      //     ),
-                      //     label: aboutToClick
-                      //         ? AnimatedTextKit(
-                      //             totalRepeatCount: 1,
-                      //             animatedTexts: [
-                      //               TyperAnimatedText(
-                      //                 "Build Now!",
-                      //                 textStyle: GoogleFonts
-                      //                     .montserrat(
-                      //                   //fontSize: 50,
-                      //                   fontWeight:
-                      //                       FontWeight.w900,
-                      //                 ),
-                      //                 speed: const Duration(
-                      //                     milliseconds: 50),
-                      //               )
-                      //             ],
-                      //           )
-                      //         : Text(
-                      //             "Build Now!",
-                      //             style: GoogleFonts
-                      //                 .montserrat(
-                      //               //fontSize: 50,
-                      //               fontWeight:
-                      //                   FontWeight.w900,
-                      //             ),
-                      //           ),
-                      //   ),
-                      // )
                     ],
                   ),
                 ),

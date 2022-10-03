@@ -99,6 +99,9 @@ flutter:
     - family:  LinkedIn
       fonts:
         - asset: fonts/LinkedIn.ttf
+    - family:  ArrowIcons
+      fonts:
+        - asset: fonts/ArrowIcons.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
