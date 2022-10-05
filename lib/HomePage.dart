@@ -541,7 +541,7 @@ class _HomePageState extends State<HomePage> {
                                                           MediaQuery.of(context)
                                                                   .size
                                                                   .width *
-                                                              0.3,
+                                                              0.5,
                                                       child: Container(
                                                         padding:
                                                             EdgeInsets.all(20),
@@ -594,12 +594,8 @@ class _HomePageState extends State<HomePage> {
                                                                     indent: 20,
                                                                     endIndent:
                                                                         0,
-                                                                    color: Color
-                                                                        .fromARGB(
-                                                                            123,
-                                                                            158,
-                                                                            158,
-                                                                            158),
+                                                                    color: Colors
+                                                                        .white,
                                                                     thickness:
                                                                         0.5,
                                                                   ),
@@ -682,7 +678,7 @@ class _HomePageState extends State<HomePage> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.3,
+                                                            0.5,
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
@@ -732,12 +728,8 @@ class _HomePageState extends State<HomePage> {
                                                                   width: 20,
                                                                   indent: 20,
                                                                   endIndent: 0,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          123,
-                                                                          158,
-                                                                          158,
-                                                                          158),
+                                                                  color: Colors
+                                                                      .white,
                                                                   thickness:
                                                                       0.5,
                                                                 ),
@@ -843,7 +835,7 @@ class _HomePageState extends State<HomePage> {
                                                           MediaQuery.of(context)
                                                                   .size
                                                                   .width *
-                                                              0.3,
+                                                              0.5,
                                                       child: Container(
                                                         padding:
                                                             EdgeInsets.all(20),
@@ -896,12 +888,8 @@ class _HomePageState extends State<HomePage> {
                                                                     indent: 20,
                                                                     endIndent:
                                                                         0,
-                                                                    color: Color
-                                                                        .fromARGB(
-                                                                            123,
-                                                                            158,
-                                                                            158,
-                                                                            158),
+                                                                    color: Colors
+                                                                        .white,
                                                                     thickness:
                                                                         0.5,
                                                                   ),
@@ -1069,7 +1057,6 @@ class _HomePageState extends State<HomePage> {
 
                                     Positioned.fill(
                                       child: SingleChildScrollView(
-                                        controller: _scrollController,
                                         scrollDirection: Axis.horizontal,
                                         child: Row(
                                           mainAxisAlignment:
