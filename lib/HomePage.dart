@@ -24,6 +24,8 @@ class HomePage extends StatefulWidget {
 
 enum Stages { build, specify, design, implement, me }
 
+enum Approach { discuss, plan, build }
+
 class _HomePageState extends State<HomePage> {
   bool aboutToClick = false;
   bool hoveringOver = false;
@@ -111,9 +113,7 @@ class _HomePageState extends State<HomePage> {
                                                     aboutToClick = hover;
                                                   });
                                                 },
-                                                icon: Icon(
-                                                  Icons.arrow_forward,
-                                                ),
+                                                icon: Icon(Icons.send),
                                                 label: aboutToClick
                                                     ? AnimatedTextKit(
                                                         totalRepeatCount: 1,
@@ -308,12 +308,12 @@ class _HomePageState extends State<HomePage> {
                                                     ? Text(
                                                         "Bring your app ideas\nto life.",
                                                         style: GoogleFonts
-                                                            .montserrat(
+                                                            .passionOne(
                                                           color: Colors.white,
 
                                                           fontWeight:
                                                               FontWeight.bold,
-                                                          fontSize: 100,
+                                                          fontSize: 150,
                                                           //overflow: TextOverflow.visible,
                                                         ),
                                                         textAlign:
@@ -334,14 +334,14 @@ class _HomePageState extends State<HomePage> {
                                                             "Bring your app ideas\nto life.",
                                                             textStyle:
                                                                 GoogleFonts
-                                                                    .montserrat(
+                                                                    .passionOne(
                                                               color:
                                                                   Colors.white,
 
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
-                                                              fontSize: 100,
+                                                              fontSize: 150,
                                                               //overflow: TextOverflow.visible,
                                                             ),
                                                             textAlign:
@@ -476,9 +476,45 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                     ),
-                                    Align(
-                                      alignment: Alignment.center,
+
+                                    // Align(
+                                    //   alignment: Alignment.center,
+                                    //   child: SingleChildScrollView(
+                                    //     scrollDirection: Axis.horizontal,
+                                    //     child: Row(
+                                    //       children: [
+                                    //         // Container(
+                                    //         //   padding: EdgeInsets.all(20),
+                                    //         //   height: 200,
+                                    //         //   color: Color.fromARGB(
+                                    //         //       140, 0, 140, 255),
+                                    //         //   width: MediaQuery.of(context)
+                                    //         //           .size
+                                    //         //           .width *
+                                    //         //       0.7,
+                                    //         // ),
+                                    //         SizedBox(
+                                    //           width: MediaQuery.of(context)
+                                    //                   .size
+                                    //                   .width *
+                                    //               0.5,
+                                    //           child: Image.asset(
+                                    //             "lana.PNG",
+                                    //             //colorBlendMode: BlendMode.screen,
+                                    //             //color: Color.fromARGB(25, 255, 255, 255),
+                                    //             fit: BoxFit.cover,
+                                    //             filterQuality:
+                                    //                 FilterQuality.medium,
+                                    //           ),
+                                    //         ),
+                                    //       ],
+                                    //     ),
+                                    //   ),
+                                    // ),
+
+                                    Positioned.fill(
                                       child: SingleChildScrollView(
+                                        controller: _scrollController,
                                         scrollDirection: Axis.horizontal,
                                         child: Row(
                                           mainAxisAlignment:
@@ -488,89 +524,141 @@ class _HomePageState extends State<HomePage> {
                                             AutoScrollTag(
                                               key: Key("ScrollDiscuss"),
                                               controller: _scrollController,
-                                              index: Stages.specify.index,
+                                              index: Approach.discuss.index,
                                               child: SizedBox(
                                                 width: MediaQuery.of(context)
                                                         .size
                                                         .width *
                                                     0.7,
-                                                child: UnconstrainedBox(
-                                                  child: Container(
-                                                    padding: EdgeInsets.all(20),
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.5,
+                                                child: Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: UnconstrainedBox(
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.min,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .min,
-                                                            children: [
-                                                              Container(
-                                                                padding: EdgeInsets
-                                                                    .only(
-                                                                        top: 5),
-                                                                child: Icon(
-                                                                  BuildNowIcons
-                                                                      .specifyicon,
-                                                                  size: 50,
-                                                                  color: Colors
-                                                                      .white,
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.3,
+                                                      child: Container(
+                                                        padding:
+                                                            EdgeInsets.all(20),
+                                                        child: Column(
+                                                          children: [
+                                                            Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .min,
+                                                                  children: [
+                                                                    Container(
+                                                                      padding: EdgeInsets
+                                                                          .only(
+                                                                              top: 5),
+                                                                      child:
+                                                                          Icon(
+                                                                        BuildNowIcons
+                                                                            .specifyicon,
+                                                                        size:
+                                                                            50,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                        "DISCUSS",
+                                                                        style:
+                                                                            subHeadingTextStyle),
+                                                                  ],
                                                                 ),
-                                                              ),
-                                                              Text("DISCUSS",
-                                                                  style:
-                                                                      subHeadingTextStyle),
-                                                            ],
-                                                          ),
-                                                          Container(
-                                                            height: 100,
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                              left: 30,
-                                                              right: 30,
+                                                                Container(
+                                                                  height: 100,
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .only(
+                                                                    left: 30,
+                                                                    right: 30,
+                                                                  ),
+                                                                  child:
+                                                                      VerticalDivider(
+                                                                    width: 20,
+                                                                    indent: 20,
+                                                                    endIndent:
+                                                                        0,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            123,
+                                                                            158,
+                                                                            158,
+                                                                            158),
+                                                                    thickness:
+                                                                        0.5,
+                                                                  ),
+                                                                ),
+                                                                Flexible(
+                                                                  child:
+                                                                      Container(
+                                                                    padding: EdgeInsets
+                                                                        .only(
+                                                                            left:
+                                                                                10),
+                                                                    child: Text(
+                                                                      "Break down your problem and outline possible features of a solution",
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .left,
+                                                                      style:
+                                                                          bodyTextStyle,
+                                                                    ),
+                                                                  ),
+                                                                )
+                                                              ],
                                                             ),
-                                                            child:
-                                                                VerticalDivider(
-                                                              width: 20,
-                                                              indent: 20,
-                                                              endIndent: 0,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      123,
-                                                                      158,
-                                                                      158,
-                                                                      158),
-                                                              thickness: 0.5,
-                                                            ),
-                                                          ),
-                                                          Flexible(
-                                                            child: Container(
+                                                            Container(
                                                               padding: EdgeInsets
                                                                   .only(
-                                                                      left: 10),
-                                                              child: Text(
-                                                                "Break down your problem and outline possible features of a solution",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .left,
-                                                                style:
-                                                                    bodyTextStyle,
+                                                                      top: 10),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .end,
+                                                                children: [
+                                                                  IconButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      _scrollController.scrollToIndex(Approach
+                                                                          .plan
+                                                                          .index);
+                                                                    },
+                                                                    iconSize:
+                                                                        30,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .arrow_circle_right_rounded,
+                                                                      // color: Colors
+                                                                      //     .white,
+                                                                    ),
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            140,
+                                                                            0,
+                                                                            140,
+                                                                            255),
+                                                                  ),
+                                                                ],
                                                               ),
-                                                            ),
-                                                          )
-                                                        ],
+                                                            )
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -581,7 +669,7 @@ class _HomePageState extends State<HomePage> {
                                             AutoScrollTag(
                                               key: Key("ScrollPlan"),
                                               controller: _scrollController,
-                                              index: Stages.specify.index,
+                                              index: Approach.plan.index,
                                               child: SizedBox(
                                                 width: MediaQuery.of(context)
                                                         .size
@@ -594,73 +682,138 @@ class _HomePageState extends State<HomePage> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.5,
+                                                            0.3,
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.min,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
+                                                      child: Column(
                                                         children: [
-                                                          Column(
+                                                          Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
                                                                     .min,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
                                                             children: [
+                                                              Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .min,
+                                                                children: [
+                                                                  Container(
+                                                                    padding: EdgeInsets
+                                                                        .only(
+                                                                            top:
+                                                                                5),
+                                                                    child: Icon(
+                                                                      BuildNowIcons
+                                                                          .specifyicon,
+                                                                      size: 50,
+                                                                      color: Colors
+                                                                          .white,
+                                                                    ),
+                                                                  ),
+                                                                  Text("PLAN",
+                                                                      style:
+                                                                          subHeadingTextStyle),
+                                                                ],
+                                                              ),
                                                               Container(
-                                                                padding: EdgeInsets
-                                                                    .only(
-                                                                        top: 5),
-                                                                child: Icon(
-                                                                  BuildNowIcons
-                                                                      .specifyicon,
-                                                                  size: 50,
-                                                                  color: Colors
-                                                                      .white,
+                                                                height: 100,
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .only(
+                                                                  left: 30,
+                                                                  right: 30,
+                                                                ),
+                                                                child:
+                                                                    VerticalDivider(
+                                                                  width: 20,
+                                                                  indent: 20,
+                                                                  endIndent: 0,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          123,
+                                                                          158,
+                                                                          158,
+                                                                          158),
+                                                                  thickness:
+                                                                      0.5,
                                                                 ),
                                                               ),
-                                                              Text("DISCUSS",
-                                                                  style:
-                                                                      subHeadingTextStyle),
+                                                              Flexible(
+                                                                child:
+                                                                    Container(
+                                                                  padding: EdgeInsets
+                                                                      .only(
+                                                                          left:
+                                                                              10),
+                                                                  child: Text(
+                                                                    "Break down your problem and outline possible features of a solution",
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .left,
+                                                                    style:
+                                                                        bodyTextStyle,
+                                                                  ),
+                                                                ),
+                                                              )
                                                             ],
                                                           ),
                                                           Container(
-                                                            height: 100,
                                                             padding:
                                                                 EdgeInsets.only(
-                                                              left: 30,
-                                                              right: 30,
-                                                            ),
-                                                            child:
-                                                                VerticalDivider(
-                                                              width: 20,
-                                                              indent: 20,
-                                                              endIndent: 0,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      123,
-                                                                      158,
-                                                                      158,
-                                                                      158),
-                                                              thickness: 0.5,
-                                                            ),
-                                                          ),
-                                                          Flexible(
-                                                            child: Container(
-                                                              padding: EdgeInsets
-                                                                  .only(
-                                                                      left: 10),
-                                                              child: Text(
-                                                                "Break down your problem and outline possible features of a solution",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .left,
-                                                                style:
-                                                                    bodyTextStyle,
-                                                              ),
+                                                                    top: 10),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              children: [
+                                                                IconButton(
+                                                                  onPressed:
+                                                                      () {
+                                                                    _scrollController.scrollToIndex(Approach
+                                                                        .discuss
+                                                                        .index);
+                                                                  },
+                                                                  iconSize: 30,
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .arrow_circle_left_rounded,
+                                                                    // color: Colors
+                                                                    //     .white,
+                                                                  ),
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          140,
+                                                                          0,
+                                                                          140,
+                                                                          255),
+                                                                ),
+                                                                IconButton(
+                                                                  onPressed:
+                                                                      () {
+                                                                    _scrollController.scrollToIndex(
+                                                                        Approach
+                                                                            .build
+                                                                            .index);
+                                                                  },
+                                                                  iconSize: 30,
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .arrow_circle_right_rounded,
+                                                                    // color: Colors
+                                                                    //     .white,
+                                                                  ),
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          140,
+                                                                          0,
+                                                                          140,
+                                                                          255),
+                                                                ),
+                                                              ],
                                                             ),
                                                           )
                                                         ],
@@ -674,12 +827,263 @@ class _HomePageState extends State<HomePage> {
                                             AutoScrollTag(
                                               key: Key("Build"),
                                               controller: _scrollController,
-                                              index: Stages.specify.index,
+                                              index: Approach.build.index,
                                               child: SizedBox(
                                                 width: MediaQuery.of(context)
                                                         .size
                                                         .width *
                                                     0.7,
+                                                child: Align(
+                                                  alignment: Alignment.topRight,
+                                                  child: UnconstrainedBox(
+                                                    child: Container(
+                                                      padding:
+                                                          EdgeInsets.all(20),
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.3,
+                                                      child: Container(
+                                                        padding:
+                                                            EdgeInsets.all(20),
+                                                        child: Column(
+                                                          children: [
+                                                            Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .min,
+                                                                  children: [
+                                                                    Container(
+                                                                      padding: EdgeInsets
+                                                                          .only(
+                                                                              top: 5),
+                                                                      child:
+                                                                          Icon(
+                                                                        BuildNowIcons
+                                                                            .specifyicon,
+                                                                        size:
+                                                                            50,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                        "BUILD",
+                                                                        style:
+                                                                            subHeadingTextStyle),
+                                                                  ],
+                                                                ),
+                                                                Container(
+                                                                  height: 100,
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .only(
+                                                                    left: 30,
+                                                                    right: 30,
+                                                                  ),
+                                                                  child:
+                                                                      VerticalDivider(
+                                                                    width: 20,
+                                                                    indent: 20,
+                                                                    endIndent:
+                                                                        0,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            123,
+                                                                            158,
+                                                                            158,
+                                                                            158),
+                                                                    thickness:
+                                                                        0.5,
+                                                                  ),
+                                                                ),
+                                                                Flexible(
+                                                                  child:
+                                                                      Container(
+                                                                    padding: EdgeInsets
+                                                                        .only(
+                                                                            left:
+                                                                                10),
+                                                                    child: Text(
+                                                                      "Break down your problem and outline possible features of a solution",
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .left,
+                                                                      style:
+                                                                          bodyTextStyle,
+                                                                    ),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                            Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      top: 10),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
+                                                                children: [
+                                                                  IconButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      _scrollController.scrollToIndex(Approach
+                                                                          .plan
+                                                                          .index);
+                                                                    },
+                                                                    iconSize:
+                                                                        30,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .arrow_circle_left_rounded,
+                                                                      // color: Colors
+                                                                      //     .white,
+                                                                    ),
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            140,
+                                                                            0,
+                                                                            140,
+                                                                            255),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        //About
+                        Container(
+                          color: Color.fromARGB(255, 36, 36, 36),
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          child: SizedBox(
+                            height: null,
+                            child: Stack(
+                              children: [
+                                Stack(
+                                  children: [
+                                    // Container(
+                                    //   padding: EdgeInsets.all(20),
+                                    //   child: Divider(
+                                    //     color:
+                                    //         Color.fromARGB(255, 255, 255, 255),
+                                    //     thickness: 0.5,
+                                    //   ),
+                                    // ),
+                                    Positioned(
+                                      //alignment: Alignment.centerLeft,
+                                      top: 300,
+
+                                      child: Container(
+                                        padding: EdgeInsets.only(left: 20),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "ABOUT\nME",
+                                              style: GoogleFonts.passionOne(
+                                                color: Color.fromARGB(
+                                                    5, 255, 255, 255),
+
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 200,
+                                                //overflow: TextOverflow.visible,
+                                              ),
+                                              textAlign: TextAlign.left,
+                                            ),
+                                            Icon(
+                                              CupertinoIcons.person_alt,
+                                              size: 200,
+                                              color:
+                                                  Color.fromARGB(36, 255, 0, 0),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+
+                                    // Align(
+                                    //   alignment: Alignment.center,
+                                    //   child: SingleChildScrollView(
+                                    //     scrollDirection: Axis.horizontal,
+                                    //     child: Row(
+                                    //       children: [
+                                    //         // Container(
+                                    //         //   padding: EdgeInsets.all(20),
+                                    //         //   height: 200,
+                                    //         //   color: Color.fromARGB(
+                                    //         //       140, 0, 140, 255),
+                                    //         //   width: MediaQuery.of(context)
+                                    //         //           .size
+                                    //         //           .width *
+                                    //         //       0.7,
+                                    //         // ),
+                                    //         SizedBox(
+                                    //           width: MediaQuery.of(context)
+                                    //                   .size
+                                    //                   .width *
+                                    //               0.5,
+                                    //           child: Image.asset(
+                                    //             "lana.PNG",
+                                    //             //colorBlendMode: BlendMode.screen,
+                                    //             //color: Color.fromARGB(25, 255, 255, 255),
+                                    //             fit: BoxFit.cover,
+                                    //             filterQuality:
+                                    //                 FilterQuality.medium,
+                                    //           ),
+                                    //         ),
+                                    //       ],
+                                    //     ),
+                                    //   ),
+                                    // ),
+
+                                    Positioned.fill(
+                                      child: SingleChildScrollView(
+                                        controller: _scrollController,
+                                        scrollDirection: Axis.horizontal,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            //Specify button
+                                            SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.7,
+                                              child: Align(
+                                                alignment:
+                                                    Alignment.centerRight,
                                                 child: UnconstrainedBox(
                                                   child: Container(
                                                     padding: EdgeInsets.all(20),
@@ -691,71 +1095,78 @@ class _HomePageState extends State<HomePage> {
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.min,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
+                                                      child: Column(
                                                         children: [
-                                                          Column(
+                                                          Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
                                                                     .min,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
                                                             children: [
+                                                              // Column(
+                                                              //   mainAxisSize:
+                                                              //       MainAxisSize
+                                                              //           .min,
+                                                              //   children: [
+                                                              //     Container(
+                                                              //       padding: EdgeInsets
+                                                              //           .only(
+                                                              //               top:
+                                                              //                   5),
+                                                              //       child: Icon(
+                                                              //         BuildNowIcons
+                                                              //             .specifyicon,
+                                                              //         size: 50,
+                                                              //         color: Colors
+                                                              //             .white,
+                                                              //       ),
+                                                              //     ),
+                                                              //     Text(
+                                                              //         "DISCUSS",
+                                                              //         style:
+                                                              //             subHeadingTextStyle),
+                                                              //   ],
+                                                              // ),
                                                               Container(
-                                                                padding: EdgeInsets
-                                                                    .only(
-                                                                        top: 5),
-                                                                child: Icon(
-                                                                  BuildNowIcons
-                                                                      .specifyicon,
-                                                                  size: 50,
+                                                                height: 100,
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .only(
+                                                                  left: 30,
+                                                                  right: 30,
+                                                                ),
+                                                                child:
+                                                                    VerticalDivider(
+                                                                  width: 20,
+                                                                  indent: 20,
+                                                                  endIndent: 0,
                                                                   color: Colors
                                                                       .white,
+                                                                  thickness:
+                                                                      0.5,
                                                                 ),
                                                               ),
-                                                              Text("DISCUSS",
-                                                                  style:
-                                                                      subHeadingTextStyle),
+                                                              Flexible(
+                                                                child:
+                                                                    Container(
+                                                                  padding: EdgeInsets
+                                                                      .only(
+                                                                          left:
+                                                                              10),
+                                                                  child: Text(
+                                                                    "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. For creating mobile applications, Flutter is my weapon of choice due to its versatility and clean material design. Always excited to brainstorm ideas, design them and bring them to reality. Do not wait, BUILDNOW!",
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .left,
+                                                                    style:
+                                                                        bodyTextStyle,
+                                                                  ),
+                                                                ),
+                                                              )
                                                             ],
                                                           ),
-                                                          Container(
-                                                            height: 100,
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                              left: 30,
-                                                              right: 30,
-                                                            ),
-                                                            child:
-                                                                VerticalDivider(
-                                                              width: 20,
-                                                              indent: 20,
-                                                              endIndent: 0,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      123,
-                                                                      158,
-                                                                      158,
-                                                                      158),
-                                                              thickness: 0.5,
-                                                            ),
-                                                          ),
-                                                          Flexible(
-                                                            child: Container(
-                                                              padding: EdgeInsets
-                                                                  .only(
-                                                                      left: 10),
-                                                              child: Text(
-                                                                "Break down your problem and outline possible features of a solution",
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .left,
-                                                                style:
-                                                                    bodyTextStyle,
-                                                              ),
-                                                            ),
-                                                          )
                                                         ],
                                                       ),
                                                     ),

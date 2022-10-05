@@ -224,7 +224,7 @@ class _StartPageState extends State<StartPage>
                                     //   speed: const Duration(milliseconds: 70),
                                     // ),
                                     FadeAnimatedText(
-                                      "Build",
+                                      "BuildNOW!",
                                       textStyle: GoogleFonts.montserrat(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w100,
@@ -233,16 +233,16 @@ class _StartPageState extends State<StartPage>
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
-                                    FadeAnimatedText(
-                                      "NOW!",
-                                      textStyle: GoogleFonts.montserrat(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 40,
-                                        //overflow: TextOverflow.visible,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
+                                    // FadeAnimatedText(
+                                    //   "",
+                                    //   textStyle: GoogleFonts.montserrat(
+                                    //     color: Colors.white,
+                                    //     fontWeight: FontWeight.bold,
+                                    //     fontSize: 40,
+                                    //     //overflow: TextOverflow.visible,
+                                    //   ),
+                                    //   textAlign: TextAlign.center,
+                                    // ),
                                     // FadeAnimatedText(
                                     //   "Build",
                                     //   textStyle: GoogleFonts.montserrat(
