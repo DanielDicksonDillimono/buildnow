@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MediaQuery.of(context).orientation == Orientation.landscape
+    return MediaQuery.of(context).size.width > 1400
         ? Scaffold(
             body: Row(
               children: [
@@ -563,11 +563,7 @@ class _HomePageState extends State<HomePage> {
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.5,
+                                                      width: 900,
                                                       child: Container(
                                                         padding:
                                                             EdgeInsets.all(20),
@@ -713,165 +709,164 @@ class _HomePageState extends State<HomePage> {
                                                         .size
                                                         .width *
                                                     0.7,
-                                                child: UnconstrainedBox(
-                                                  child: Container(
-                                                    padding: EdgeInsets.all(20),
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.5,
+                                                child: Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: UnconstrainedBox(
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      child: Column(
-                                                        children: [
-                                                          Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .min,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .min,
-                                                                children: [
-                                                                  Container(
-                                                                    padding: EdgeInsets
-                                                                        .only(
-                                                                            top:
-                                                                                5),
-                                                                    child: Icon(
-                                                                      CupertinoIcons
-                                                                          .map,
-                                                                      size: 50,
-                                                                      color: Colors
-                                                                          .white,
-                                                                    ),
-                                                                  ),
-                                                                  Text("PLAN",
-                                                                      style:
-                                                                          subHeadingTextStyle),
-                                                                ],
-                                                              ),
-                                                              Container(
-                                                                height: 100,
-                                                                padding:
-                                                                    EdgeInsets
-                                                                        .only(
-                                                                  left: 30,
-                                                                  right: 30,
-                                                                ),
-                                                                child:
-                                                                    VerticalDivider(
-                                                                  width: 20,
-                                                                  indent: 20,
-                                                                  endIndent: 0,
-                                                                  color: Colors
-                                                                      .white,
-                                                                  thickness:
-                                                                      0.5,
-                                                                ),
-                                                              ),
-                                                              Flexible(
-                                                                child: Column(
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
+                                                      width: 900,
+                                                      child: Container(
+                                                        padding:
+                                                            EdgeInsets.all(20),
+                                                        child: Column(
+                                                          children: [
+                                                            Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: [
+                                                                Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .min,
                                                                   children: [
-                                                                    Container(
-                                                                      padding: EdgeInsets.only(
-                                                                          left:
-                                                                              10),
-                                                                      child:
-                                                                          Text(
-                                                                        "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of our solution of choice. This will help us estimate how long the project will take.",
-                                                                        textAlign:
-                                                                            TextAlign.left,
-                                                                        style:
-                                                                            bodyTextStyle,
-                                                                      ),
-                                                                    ),
                                                                     Container(
                                                                       padding: EdgeInsets
                                                                           .only(
-                                                                              top: 10),
+                                                                              top: 5),
                                                                       child:
-                                                                          Wrap(
-                                                                        children: [
-                                                                          TagWidget(
-                                                                              "WireFrames"),
-                                                                          TagWidget(
-                                                                              "UI Mockup"),
-                                                                          TagWidget(
-                                                                              "TimeLine"),
-                                                                        ],
+                                                                          Icon(
+                                                                        CupertinoIcons
+                                                                            .map,
+                                                                        size:
+                                                                            50,
+                                                                        color: Colors
+                                                                            .white,
                                                                       ),
                                                                     ),
+                                                                    Text("PLAN",
+                                                                        style:
+                                                                            subHeadingTextStyle),
                                                                   ],
                                                                 ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                          Container(
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                                    top: 10),
-                                                            child: Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              children: [
-                                                                IconButton(
-                                                                  onPressed:
-                                                                      () {
-                                                                    _scrollController.scrollToIndex(Approach
-                                                                        .discuss
-                                                                        .index);
-                                                                  },
-                                                                  iconSize: 30,
-                                                                  icon: Icon(
-                                                                    Icons
-                                                                        .arrow_circle_left_rounded,
-                                                                    // color: Colors
-                                                                    //     .white,
+                                                                Container(
+                                                                  height: 100,
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .only(
+                                                                    left: 30,
+                                                                    right: 30,
                                                                   ),
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          140,
-                                                                          0,
-                                                                          140,
-                                                                          255),
-                                                                ),
-                                                                IconButton(
-                                                                  onPressed:
-                                                                      () {
-                                                                    _scrollController.scrollToIndex(
-                                                                        Approach
-                                                                            .build
-                                                                            .index);
-                                                                  },
-                                                                  iconSize: 30,
-                                                                  icon: Icon(
-                                                                    Icons
-                                                                        .arrow_circle_right_rounded,
-                                                                    // color: Colors
-                                                                    //     .white,
+                                                                  child:
+                                                                      VerticalDivider(
+                                                                    width: 20,
+                                                                    indent: 20,
+                                                                    endIndent:
+                                                                        0,
+                                                                    color: Colors
+                                                                        .white,
+                                                                    thickness:
+                                                                        0.5,
                                                                   ),
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          140,
-                                                                          0,
-                                                                          140,
-                                                                          255),
                                                                 ),
+                                                                Flexible(
+                                                                  child: Column(
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Container(
+                                                                        padding:
+                                                                            EdgeInsets.only(left: 10),
+                                                                        child:
+                                                                            Text(
+                                                                          "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of the choosen solution. This will help us estimate how long the project will take.",
+                                                                          textAlign:
+                                                                              TextAlign.left,
+                                                                          style:
+                                                                              bodyTextStyle,
+                                                                        ),
+                                                                      ),
+                                                                      Container(
+                                                                        padding:
+                                                                            EdgeInsets.only(top: 10),
+                                                                        child:
+                                                                            Wrap(
+                                                                          children: [
+                                                                            TagWidget("WireFrames"),
+                                                                            TagWidget("UI Mockup"),
+                                                                            TagWidget("TimeLine"),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                )
                                                               ],
                                                             ),
-                                                          )
-                                                        ],
+                                                            Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      top: 10),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
+                                                                children: [
+                                                                  IconButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      _scrollController.scrollToIndex(Approach
+                                                                          .discuss
+                                                                          .index);
+                                                                    },
+                                                                    iconSize:
+                                                                        30,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .arrow_circle_left_rounded,
+                                                                      // color: Colors
+                                                                      //     .white,
+                                                                    ),
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            140,
+                                                                            0,
+                                                                            140,
+                                                                            255),
+                                                                  ),
+                                                                  IconButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      _scrollController.scrollToIndex(Approach
+                                                                          .build
+                                                                          .index);
+                                                                    },
+                                                                    iconSize:
+                                                                        30,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .arrow_circle_right_rounded,
+                                                                      // color: Colors
+                                                                      //     .white,
+                                                                    ),
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            140,
+                                                                            0,
+                                                                            140,
+                                                                            255),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -889,16 +884,13 @@ class _HomePageState extends State<HomePage> {
                                                         .width *
                                                     0.7,
                                                 child: Align(
-                                                  alignment: Alignment.topRight,
+                                                  alignment:
+                                                      Alignment.bottomRight,
                                                   child: UnconstrainedBox(
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.5,
+                                                      width: 900,
                                                       child: Container(
                                                         padding:
                                                             EdgeInsets.all(20),
@@ -1153,11 +1145,7 @@ class _HomePageState extends State<HomePage> {
                                                 child: UnconstrainedBox(
                                                   child: Container(
                                                     padding: EdgeInsets.all(20),
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.5,
+                                                    width: 900,
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(20),
