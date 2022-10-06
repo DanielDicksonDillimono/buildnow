@@ -26,6 +26,32 @@ enum Stages { build, specify, design, implement, me }
 
 enum Approach { discuss, plan, build }
 
+class TagWidget extends StatelessWidget {
+  final String tagText;
+  const TagWidget(this.tagText, {Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(
+        right: 10,
+        top: 10,
+      ),
+      child: Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          border: Border.all(color: Color.fromARGB(61, 255, 255, 255)),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          tagText,
+          style: bodyTextStyle.copyWith(fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
+
 class _HomePageState extends State<HomePage> {
   bool aboutToClick = false;
   bool hoveringOver = false;
@@ -553,7 +579,7 @@ class _HomePageState extends State<HomePage> {
                                                                       .min,
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment
-                                                                      .center,
+                                                                      .start,
                                                               children: [
                                                                 Column(
                                                                   mainAxisSize:
@@ -566,8 +592,8 @@ class _HomePageState extends State<HomePage> {
                                                                               top: 5),
                                                                       child:
                                                                           Icon(
-                                                                        BuildNowIcons
-                                                                            .specifyicon,
+                                                                        CupertinoIcons
+                                                                            .chat_bubble_2,
                                                                         size:
                                                                             50,
                                                                         color: Colors
@@ -601,22 +627,38 @@ class _HomePageState extends State<HomePage> {
                                                                   ),
                                                                 ),
                                                                 Flexible(
-                                                                  child:
+                                                                  child: Column(
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
                                                                       Container(
-                                                                    padding: EdgeInsets
-                                                                        .only(
-                                                                            left:
-                                                                                10),
-                                                                    child: Text(
-                                                                      "Break down your problem and outline possible features of a solution",
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .left,
-                                                                      style:
-                                                                          bodyTextStyle,
-                                                                    ),
+                                                                        padding:
+                                                                            EdgeInsets.only(left: 10),
+                                                                        child:
+                                                                            Text(
+                                                                          "Let's get our brains warmed up. We will break down the problem, define it and out line possible solutions.",
+                                                                          textAlign:
+                                                                              TextAlign.left,
+                                                                          style:
+                                                                              bodyTextStyle,
+                                                                        ),
+                                                                      ),
+                                                                      Container(
+                                                                        padding:
+                                                                            EdgeInsets.only(top: 10),
+                                                                        child:
+                                                                            Wrap(
+                                                                          children: [
+                                                                            TagWidget("Chat"),
+                                                                            TagWidget("Problem Definition"),
+                                                                            TagWidget("Solution Outline"),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                )
+                                                                ),
                                                               ],
                                                             ),
                                                             Container(
@@ -690,7 +732,7 @@ class _HomePageState extends State<HomePage> {
                                                                     .min,
                                                             crossAxisAlignment:
                                                                 CrossAxisAlignment
-                                                                    .center,
+                                                                    .start,
                                                             children: [
                                                               Column(
                                                                 mainAxisSize:
@@ -703,8 +745,8 @@ class _HomePageState extends State<HomePage> {
                                                                             top:
                                                                                 5),
                                                                     child: Icon(
-                                                                      BuildNowIcons
-                                                                          .specifyicon,
+                                                                      CupertinoIcons
+                                                                          .map,
                                                                       size: 50,
                                                                       color: Colors
                                                                           .white,
@@ -735,20 +777,41 @@ class _HomePageState extends State<HomePage> {
                                                                 ),
                                                               ),
                                                               Flexible(
-                                                                child:
+                                                                child: Column(
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
                                                                     Container(
-                                                                  padding: EdgeInsets
-                                                                      .only(
+                                                                      padding: EdgeInsets.only(
                                                                           left:
                                                                               10),
-                                                                  child: Text(
-                                                                    "Break down your problem and outline possible features of a solution",
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .left,
-                                                                    style:
-                                                                        bodyTextStyle,
-                                                                  ),
+                                                                      child:
+                                                                          Text(
+                                                                        "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of our solution of choice. This will help us estimate how long the project will take.",
+                                                                        textAlign:
+                                                                            TextAlign.left,
+                                                                        style:
+                                                                            bodyTextStyle,
+                                                                      ),
+                                                                    ),
+                                                                    Container(
+                                                                      padding: EdgeInsets
+                                                                          .only(
+                                                                              top: 10),
+                                                                      child:
+                                                                          Wrap(
+                                                                        children: [
+                                                                          TagWidget(
+                                                                              "WireFrames"),
+                                                                          TagWidget(
+                                                                              "UI Mockup"),
+                                                                          TagWidget(
+                                                                              "TimeLine"),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
                                                                 ),
                                                               )
                                                             ],
@@ -847,7 +910,7 @@ class _HomePageState extends State<HomePage> {
                                                                       .min,
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment
-                                                                      .center,
+                                                                      .start,
                                                               children: [
                                                                 Column(
                                                                   mainAxisSize:
@@ -860,8 +923,8 @@ class _HomePageState extends State<HomePage> {
                                                                               top: 5),
                                                                       child:
                                                                           Icon(
-                                                                        BuildNowIcons
-                                                                            .specifyicon,
+                                                                        CupertinoIcons
+                                                                            .gear,
                                                                         size:
                                                                             50,
                                                                         color: Colors
@@ -895,20 +958,36 @@ class _HomePageState extends State<HomePage> {
                                                                   ),
                                                                 ),
                                                                 Flexible(
-                                                                  child:
+                                                                  child: Column(
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
                                                                       Container(
-                                                                    padding: EdgeInsets
-                                                                        .only(
-                                                                            left:
-                                                                                10),
-                                                                    child: Text(
-                                                                      "Break down your problem and outline possible features of a solution",
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .left,
-                                                                      style:
-                                                                          bodyTextStyle,
-                                                                    ),
+                                                                        padding:
+                                                                            EdgeInsets.only(left: 10),
+                                                                        child:
+                                                                            Text(
+                                                                          "Let's put all our work into code. The development process begin. I will keep you updated based on the planned dates.",
+                                                                          textAlign:
+                                                                              TextAlign.left,
+                                                                          style:
+                                                                              bodyTextStyle,
+                                                                        ),
+                                                                      ),
+                                                                      Container(
+                                                                        padding:
+                                                                            EdgeInsets.only(top: 10),
+                                                                        child:
+                                                                            Wrap(
+                                                                          children: [
+                                                                            TagWidget("Code Base"),
+                                                                            TagWidget("Finished Product"),
+                                                                            TagWidget("Champagne"),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
                                                                 )
                                                               ],
