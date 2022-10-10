@@ -21,7 +21,9 @@ ButtonStyle actionButtonStyle = ElevatedButton.styleFrom(
   minimumSize: Size(200, 50),
 );
 
-//Color mainColor = Colors
+Color mainColor = Color.fromARGB(255, 38, 38, 38);
+Color secondaryColor = Color.fromARGB(255, 36, 36, 36);
+Color backGroundTextColor = Color.fromARGB(32, 255, 255, 255);
 
 enum ImagePosition {
   top,
