@@ -328,7 +328,7 @@ class _HomePageState extends State<HomePage> {
                                                   CrossAxisAlignment.end,
                                               children: [
                                                 SizedBox(
-                                                  height: 200,
+                                                  height: 100,
                                                 ),
                                                 animationDone
                                                     ? Text(
