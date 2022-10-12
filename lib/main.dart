@@ -1,6 +1,5 @@
 import 'package:buildnow/HomePage.dart';
 import 'package:buildnow/ProjectPage.dart';
-import 'package:buildnow/StartPage.dart';
 import 'package:buildnow/contactform.dart';
 import 'package:flutter/material.dart';
 import 'package:url_strategy/url_strategy.dart';
