@@ -20,41 +20,11 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-enum Stages { build, specify, design, implement, me }
-
-enum Approach { discuss, plan, build }
-
-class TagWidget extends StatelessWidget {
-  final String tagText;
-  const TagWidget(this.tagText, {Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(
-        right: 10,
-        top: 10,
-      ),
-      child: Container(
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          border: Border.all(color: Color.fromARGB(61, 255, 255, 255)),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(
-          tagText,
-          style: bodyTextStyle.copyWith(fontSize: 20),
-        ),
-      ),
-    );
-  }
-}
-
 class _HomePageState extends State<HomePage> {
   bool aboutToClick = false;
   bool hoveringOver = false;
   bool animationDone = false;
-  Stages selectedStage = Stages.build;
+
   final AutoScrollController _scrollController =
       AutoScrollController(axis: Axis.horizontal);
 
@@ -98,83 +68,71 @@ class _HomePageState extends State<HomePage> {
                                   top: 20,
                                   bottom: 50,
                                 ),
-                                child: InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      selectedStage = Stages.me;
-                                      _scrollController.scrollToIndex(5);
-                                    });
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.only(top: 5),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Hi, I'm",
-                                              style: bodyTextStyle,
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.only(top: 5),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Hi, I'm",
+                                            style: bodyTextStyle,
+                                          ),
+                                          Text(
+                                            "Daniel Dickson",
+                                            style: subHeadingTextStyle,
+                                          ),
+                                          Text(
+                                            "I build Mobile and the Web applications",
+                                            style: bodyTextStyle,
+                                          ),
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                              top: 20,
                                             ),
-                                            Text(
-                                              "Daniel Dickson",
-                                              style: subHeadingTextStyle,
-                                            ),
-                                            Text(
-                                              "I build Mobile and the Web applications",
-                                              style: bodyTextStyle,
-                                            ),
-                                            Container(
-                                              padding: EdgeInsets.only(
-                                                top: 20,
-                                              ),
-                                              child: ElevatedButton.icon(
-                                                style: actionButtonStyle,
-                                                onPressed: goToContactForm,
-                                                onHover: (hover) {
-                                                  setState(() {
-                                                    aboutToClick = hover;
-                                                  });
-                                                },
-                                                icon: Icon(Icons.send),
-                                                label: aboutToClick
-                                                    ? AnimatedTextKit(
-                                                        totalRepeatCount: 1,
-                                                        animatedTexts: [
-                                                          TyperAnimatedText(
-                                                            "Let's chat",
-                                                            textStyle:
-                                                                GoogleFonts
-                                                                    .montserrat(
-                                                              //fontSize: 50,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
-                                                            ),
-                                                            speed:
-                                                                const Duration(
-                                                                    milliseconds:
-                                                                        50),
-                                                          )
-                                                        ],
-                                                      )
-                                                    : Text(
-                                                        "Let's chat",
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                          //fontSize: 50,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                        ),
+                                            child: ElevatedButton.icon(
+                                              style: actionButtonStyle,
+                                              onPressed: goToContactForm,
+                                              onHover: (hover) {
+                                                setState(() {
+                                                  aboutToClick = hover;
+                                                });
+                                              },
+                                              icon: Icon(Icons.send),
+                                              label: aboutToClick
+                                                  ? AnimatedTextKit(
+                                                      totalRepeatCount: 1,
+                                                      animatedTexts: [
+                                                        TyperAnimatedText(
+                                                          "Let's chat",
+                                                          textStyle: GoogleFonts
+                                                              .montserrat(
+                                                            //fontSize: 50,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ),
+                                                          speed: const Duration(
+                                                              milliseconds: 50),
+                                                        )
+                                                      ],
+                                                    )
+                                                  : Text(
+                                                      "Let's chat",
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                        //fontSize: 50,
+                                                        fontWeight:
+                                                            FontWeight.w700,
                                                       ),
-                                              ),
-                                            )
-                                          ],
-                                        ),
+                                                    ),
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
 

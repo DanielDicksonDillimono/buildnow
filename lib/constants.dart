@@ -30,3 +30,37 @@ enum ImagePosition {
   center,
   bottom,
 }
+
+class TagWidget extends StatelessWidget {
+  final String tagText;
+  const TagWidget(this.tagText, {Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(
+        right: 10,
+        top: 10,
+      ),
+      child: Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          border: Border.all(color: Color.fromARGB(61, 255, 255, 255)),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          tagText,
+          style: bodyTextStyle.copyWith(fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
+
+enum MobilePages {
+  intro,
+  approach,
+  about,
+}
+
+enum Approach { discuss, plan, build }
