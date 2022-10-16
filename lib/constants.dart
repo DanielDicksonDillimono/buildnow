@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 TextStyle bodyTextStyle = GoogleFonts.montserrat(
-    color: Colors.white, fontWeight: FontWeight.w200, fontSize: 26);
+  color: Colors.white,
+  fontWeight: FontWeight.w200,
+  fontSize: 26,
+);
 TextStyle headerTextStyle = TextStyle();
 TextStyle subHeadingTextStyle = GoogleFonts.montserrat(
   color: Colors.white,
-
   fontWeight: FontWeight.bold,
   fontSize: 50,
   //overflow: TextOverflow.visible,
