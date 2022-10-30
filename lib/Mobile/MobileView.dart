@@ -80,22 +80,14 @@ class _MainMobileViewState extends State<MainMobileView> {
         return Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TextButton(
+            IconButton(
               onPressed: () {
                 setIndexFunc(0);
                 pageIndex = 0;
               },
-              child: Text(
-                "Home",
-                style: GoogleFonts.montserrat(
-                  //fontSize: 50,
-                  // fontSize: MediaQuery.of(
-                  //             context)
-                  //         .size
-                  //         .width *
-                  //     0.05,
-                  fontWeight: FontWeight.w700,
-                ),
+              icon: Icon(
+                CupertinoIcons.home,
+                color: Colors.grey,
               ),
             ),
             TextButton(
@@ -138,6 +130,7 @@ class _MainMobileViewState extends State<MainMobileView> {
                   //         .width *
                   //     0.05,
                   fontWeight: FontWeight.w700,
+                  color: Colors.grey,
                 ),
               ),
             ),
@@ -181,6 +174,7 @@ class _MainMobileViewState extends State<MainMobileView> {
                   //         .width *
                   //     0.05,
                   fontWeight: FontWeight.w700,
+                  color: Colors.grey,
                 ),
               ),
             ),
