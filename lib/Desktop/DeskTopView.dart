@@ -51,168 +51,167 @@ class _DeskTopViewState extends State<DeskTopView> {
             ),
             //  color: Color.fromARGB(255, 38, 38, 38),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Container(
-                    padding: EdgeInsets.all(50),
-                    child: Column(
-                      children: [
-                        // //Me
-                        Container(
-                          padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 50,
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.only(top: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Hi, I'm",
-                                      style: bodyTextStyle,
+                Container(
+                  padding: EdgeInsets.all(50),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // //Me
+                      Container(
+                        padding: EdgeInsets.only(
+                          top: 20,
+                          bottom: 50,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(top: 5),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Hi, I'm Daniel and I build",
+                                    style: GoogleFonts.montserrat(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w100,
+                                      fontSize: 26,
+                                      //overflow: TextOverflow.visible,
                                     ),
-                                    Text(
-                                      "Daniel",
-                                      style: subHeadingTextStyle,
+                                  ),
+                                  // Text(
+                                  //   "Daniel",
+                                  //   style: subHeadingTextStyle,
+                                  // ),
+                                  Text(
+                                    "Mobile and the Web applications",
+                                    style: bodyTextStyle,
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.only(
+                                      top: 20,
                                     ),
-                                    Text(
-                                      "I build Mobile and the Web applications",
-                                      style: bodyTextStyle,
-                                    ),
-                                    Container(
-                                      padding: EdgeInsets.only(
-                                        top: 20,
-                                      ),
-                                      child: ElevatedButton.icon(
-                                        style: actionButtonStyle,
-                                        onPressed: goToContactForm,
-                                        onHover: (hover) {
-                                          setState(() {
-                                            aboutToClick = hover;
-                                          });
-                                        },
-                                        icon: Icon(Icons.send),
-                                        label: aboutToClick
-                                            ? AnimatedTextKit(
-                                                totalRepeatCount: 1,
-                                                animatedTexts: [
-                                                  TyperAnimatedText(
-                                                    "Let's chat",
-                                                    textStyle:
-                                                        GoogleFonts.montserrat(
-                                                      //fontSize: 50,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                    ),
-                                                    speed: const Duration(
-                                                        milliseconds: 50),
-                                                  )
-                                                ],
-                                              )
-                                            : Text(
-                                                "Let's chat",
-                                                style: GoogleFonts.montserrat(
-                                                  //fontSize: 50,
-                                                  fontWeight: FontWeight.w700,
-                                                ),
+                                    child: ElevatedButton.icon(
+                                      style: actionButtonStyle,
+                                      onPressed: goToContactForm,
+                                      onHover: (hover) {
+                                        setState(() {
+                                          aboutToClick = hover;
+                                        });
+                                      },
+                                      icon: Icon(Icons.send),
+                                      label: aboutToClick
+                                          ? AnimatedTextKit(
+                                              totalRepeatCount: 1,
+                                              animatedTexts: [
+                                                TyperAnimatedText(
+                                                  "Let's chat",
+                                                  textStyle:
+                                                      GoogleFonts.montserrat(
+                                                    //fontSize: 50,
+                                                    fontWeight: FontWeight.w700,
+                                                  ),
+                                                  speed: const Duration(
+                                                      milliseconds: 50),
+                                                )
+                                              ],
+                                            )
+                                          : Text(
+                                              "Let's chat",
+                                              style: GoogleFonts.montserrat(
+                                                //fontSize: 50,
+                                                fontWeight: FontWeight.w700,
                                               ),
-                                      ),
-                                    )
-                                  ],
+                                            ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Divider(
+                        color: Colors.white,
+                        thickness: 0.5,
+                      ),
+
+                      Container(
+                        padding: EdgeInsets.only(top: 10),
+                        child: ListTile(
+                          leading: Icon(
+                            CupertinoIcons.phone,
+                            color: Colors.white,
+                          ),
+                          title: Text(
+                            "+31684555925",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 15,
+                              //overflow: TextOverflow.visible,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(top: 10),
+                        child: ListTile(
+                          leading: Icon(
+                            Icons.mail_outline,
+                            color: Colors.white,
+                          ),
+                          title: Text(
+                            "info@buildnow.dev",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 15,
+                              //overflow: TextOverflow.visible,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(top: 10),
+                        child: ListTile(
+                          leading: Icon(
+                            FontAwesomeIcons.buildingCircleArrowRight,
+                            color: Colors.white,
+                          ),
+                          title: Column(
+                            children: [
+                              Text(
+                                "Deeformed BV",
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 15,
+                                  //overflow: TextOverflow.visible,
                                 ),
                               ),
+                              Text(
+                                "KVK 83590668",
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 15,
+                                  //overflow: TextOverflow.visible,
+                                ),
+                              )
                             ],
                           ),
                         ),
-
-                        Container(
-                          padding: EdgeInsets.only(
-                            left: 30,
-                            right: 30,
-                          ),
-                          child: Divider(
-                            color: Color.fromARGB(123, 158, 158, 158),
-                            thickness: 0.5,
-                          ),
-                        ),
-
-                        Container(
-                          padding: EdgeInsets.only(top: 10),
-                          child: ListTile(
-                            leading: Icon(
-                              CupertinoIcons.phone,
-                              color: Color.fromARGB(100, 255, 255, 255),
-                            ),
-                            title: Text(
-                              "+31684555925",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.montserrat(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 15,
-                                //overflow: TextOverflow.visible,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(top: 10),
-                          child: ListTile(
-                            leading: Icon(
-                              Icons.mail_outline,
-                              color: Color.fromARGB(100, 255, 255, 255),
-                            ),
-                            title: Text(
-                              "info@buildnow.dev",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.montserrat(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 15,
-                                //overflow: TextOverflow.visible,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(top: 10),
-                          child: ListTile(
-                            leading: Icon(
-                              FontAwesomeIcons.buildingCircleArrowRight,
-                              color: Color.fromARGB(100, 255, 255, 255),
-                            ),
-                            title: Column(
-                              children: [
-                                Text(
-                                  "Deeformed BV",
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.montserrat(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w300,
-                                    fontSize: 15,
-                                    //overflow: TextOverflow.visible,
-                                  ),
-                                ),
-                                Text(
-                                  "KVK 83590668",
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.montserrat(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w300,
-                                    fontSize: 15,
-                                    //overflow: TextOverflow.visible,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 )
               ],
@@ -237,8 +236,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                         // Align(
                         //   alignment: Alignment.bottomRight,
                         //   child: SizedBox(
-                        //     width:
-                        //         MediaQuery.of(context).size.width * 0.5,
+                        //     width: MediaQuery.of(context).size.width * 0.5,
                         //     child: Image.asset(
                         //       "lana.PNG",
                         //       //colorBlendMode: BlendMode.screen,
@@ -283,7 +281,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                                                     color: Colors.white,
 
                                                     fontWeight: FontWeight.bold,
-                                                    fontSize: 150,
+                                                    fontSize: 200,
                                                     //overflow: TextOverflow.visible,
                                                   ),
                                                   textAlign: TextAlign.right,
@@ -305,7 +303,7 @@ class _DeskTopViewState extends State<DeskTopView> {
 
                                                         fontWeight:
                                                             FontWeight.bold,
-                                                        fontSize: 150,
+                                                        fontSize: 200,
                                                         //overflow: TextOverflow.visible,
                                                       ),
                                                       textAlign:
@@ -315,16 +313,16 @@ class _DeskTopViewState extends State<DeskTopView> {
                                                     ),
                                                   ],
                                                 ),
-                                          Text(
-                                            "Specify | Build",
-                                            style: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w100,
-                                              fontSize: 40,
-                                              //overflow: TextOverflow.visible,
-                                            ),
-                                            textAlign: TextAlign.left,
-                                          ),
+                                          // Text(
+                                          //   "Specify | Build",
+                                          //   style: GoogleFonts.montserrat(
+                                          //     color: Colors.white,
+                                          //     fontWeight: FontWeight.w100,
+                                          //     fontSize: 40,
+                                          //     //overflow: TextOverflow.visible,
+                                          //   ),
+                                          //   textAlign: TextAlign.left,
+                                          // ),
                                         ],
                                       ),
                                       // Container(
@@ -443,7 +441,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                               //       children: [
                               //         // Container(
                               //         //   padding: EdgeInsets.all(20),
-                              //         //   height: 200,
+                              //         //   height: 150,
                               //         //   color: Color.fromARGB(
                               //         //       140, 0, 140, 255),
                               //         //   width: MediaQuery.of(context)
