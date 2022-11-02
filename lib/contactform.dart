@@ -1,6 +1,7 @@
 import 'dart:convert';
 //import 'dart:developer';
 
+import 'package:buildnow/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -91,6 +92,7 @@ class _ContactFormState extends State<ContactForm> {
             padding: paddingLeftRight,
             child: emailSent
                 ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         padding: EdgeInsets.all(20),
@@ -102,12 +104,11 @@ class _ContactFormState extends State<ContactForm> {
                       Text(
                         "Message sent.\nI will reach back to you as soon as possible\n\nDaniel",
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.montserrat(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          fontWeight: FontWeight.w300,
-                          fontSize: 20,
-                          //overflow: TextOverflow.visible,
-                        ),
+                        style: MediaQuery.of(context).size.width > 700
+                            ? bodyTextStyle.copyWith(
+                                color: Colors.black,
+                              )
+                            : mobileBodyTextStyle.copyWith(color: Colors.black),
                       ),
                     ],
                   )
@@ -133,12 +134,13 @@ class _ContactFormState extends State<ContactForm> {
                                     Text(
                                       "Send a message and I will reach back to you as soon as possible",
                                       textAlign: TextAlign.center,
-                                      style: GoogleFonts.montserrat(
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                        fontWeight: FontWeight.w300,
-                                        fontSize: 20,
-                                        //overflow: TextOverflow.visible,
-                                      ),
+                                      style: MediaQuery.of(context).size.width >
+                                              700
+                                          ? bodyTextStyle.copyWith(
+                                              color: Colors.black,
+                                            )
+                                          : mobileBodyTextStyle.copyWith(
+                                              color: Colors.black),
                                     ),
                                   ],
                                 ),
@@ -254,23 +256,20 @@ class _ContactFormState extends State<ContactForm> {
                             top: 20,
                           ),
                           child: ElevatedButton.icon(
-                            style: ElevatedButton.styleFrom(
-                                elevation: 10,
-                                primary: Colors.blue,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                minimumSize: Size(200, 50)),
+                            style: actionButtonStyle,
                             onPressed: sendMail,
-                            icon: Icon(
-                              Icons.arrow_forward,
-                            ),
+                            icon: Icon(Icons.send),
                             label: Text(
                               "Send",
                               style: GoogleFonts.montserrat(
-                                  //fontSize: 50,
-                                  // fontWeight: FontWeight.w900,
-                                  ),
+                                //fontSize: 50,
+                                // fontSize:
+                                //     MediaQuery.of(context)
+                                //             .size
+                                //             .width *
+                                //         0.05,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                           ),
                         ),
