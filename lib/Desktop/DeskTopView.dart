@@ -21,6 +21,7 @@ class _DeskTopViewState extends State<DeskTopView> {
   bool aboutToClick = false;
   bool hoveringOver = false;
   bool animationDone = false;
+  DesktopPages currentpage = DesktopPages.home;
 
   final AutoScrollController _scrollController =
       AutoScrollController(axis: Axis.horizontal);
@@ -29,9 +30,89 @@ class _DeskTopViewState extends State<DeskTopView> {
     Navigator.pushNamed(context, '/Contact');
   }
 
+  void changePage(DesktopPages selectedPage) {
+    setState(() {
+      currentpage = selectedPage;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(0, 255, 255, 255),
+        shadowColor: Color.fromARGB(17, 0, 0, 0),
+        actions: [
+          Container(
+            padding: navbarButtonPadding,
+            child: TextButton(
+              onPressed: () {
+                changePage(DesktopPages.home);
+              },
+              child: Text(
+                "Home",
+                style: currentpage == DesktopPages.home
+                    ? navBarTextStyle
+                    : navBarTextStyle.copyWith(
+                        fontSize: 15,
+                      ),
+              ),
+            ),
+          ),
+          Container(
+            padding: navbarButtonPadding,
+            child: TextButton(
+              onPressed: () {
+                changePage(DesktopPages.realize);
+              },
+              child: Text(
+                "Realize",
+                style: currentpage == DesktopPages.realize
+                    ? navBarTextStyle
+                    : navBarTextStyle.copyWith(
+                        fontSize: 15,
+                      ),
+              ),
+            ),
+          ),
+          Container(
+            padding: navbarButtonPadding,
+            child: TextButton(
+              onPressed: () {
+                changePage(DesktopPages.approach);
+              },
+              child: Text(
+                "Approach",
+                style: currentpage == DesktopPages.approach
+                    ? navBarTextStyle
+                    : navBarTextStyle.copyWith(
+                        fontSize: 15,
+                      ),
+              ),
+            ),
+          ),
+          Container(
+            padding: navbarButtonPadding,
+            child: TextButton(
+              onPressed: () {
+                changePage(DesktopPages.aboutMe);
+              },
+              child: Text(
+                "About me",
+                style: currentpage == DesktopPages.aboutMe
+                    ? navBarTextStyle
+                    : navBarTextStyle.copyWith(
+                        fontSize: 15,
+                      ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.05,
+          )
+        ],
+      ),
       body: Row(
         children: [
           Container(

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+//colors
+Color mainColor = Color.fromARGB(255, 38, 38, 38);
+Color secondaryColor = Color.fromARGB(255, 36, 36, 36);
+Color backGroundTextColor = Color.fromARGB(32, 255, 255, 255);
+
 TextStyle bodyTextStyle = GoogleFonts.montserrat(
   color: Colors.white,
   fontWeight: FontWeight.w400,
@@ -43,15 +48,15 @@ ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
   minimumSize: Size(200, 50),
 );
 
-Color mainColor = Color.fromARGB(255, 38, 38, 38);
-Color secondaryColor = Color.fromARGB(255, 36, 36, 36);
-Color backGroundTextColor = Color.fromARGB(32, 255, 255, 255);
+//NavBar
+TextStyle navBarTextStyle = GoogleFonts.montserrat(
+  color: Colors.white,
+  fontWeight: FontWeight.w300,
+  fontSize: 20,
+  //overflow: TextOverflow.visible,
+);
 
-enum ImagePosition {
-  top,
-  center,
-  bottom,
-}
+EdgeInsetsGeometry navbarButtonPadding = EdgeInsets.only(left: 10, right: 10);
 
 class TagWidget extends StatelessWidget {
   final String tagText;
@@ -79,10 +84,28 @@ class TagWidget extends StatelessWidget {
   }
 }
 
+//enum
+enum ImagePosition {
+  top,
+  center,
+  bottom,
+}
+
 enum MobilePages {
   intro,
   approach,
   about,
 }
 
-enum Approach { discuss, plan, build }
+enum Approach {
+  discuss,
+  plan,
+  build,
+}
+
+enum DesktopPages {
+  home,
+  realize,
+  approach,
+  aboutMe,
+}
