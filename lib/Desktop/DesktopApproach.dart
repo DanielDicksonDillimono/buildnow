@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:buildnow/arrow_icons_icons.dart';
-import 'package:buildnow/constants.dart';
+import 'package:buildnow/Shared/arrow_icons_icons.dart';
+import 'package:buildnow/Shared/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

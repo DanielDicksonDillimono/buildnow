@@ -3,7 +3,7 @@ import 'package:buildnow/Desktop/DeskTopAboutMe.dart';
 import 'package:buildnow/Desktop/DeskTopHomePage.dart';
 import 'package:buildnow/Desktop/DeskTopRealizePage.dart';
 import 'package:buildnow/Desktop/DesktopApproach.dart';
-import 'package:buildnow/constants.dart';
+import 'package:buildnow/Shared/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

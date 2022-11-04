@@ -1,5 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:buildnow/constants.dart';
+import 'package:buildnow/Shared/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -308,7 +308,7 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                                           child: Container(
                                             padding: EdgeInsets.only(left: 10),
                                             child: Text(
-                                              "Buildnow is my way of working with people to break down their problems and build a suitable solution for it in form of a mobile or web application.\n\nMy other interest include, motorsport, comics, animations, working out  and sketching. And, yeah, talking nonstop about cars and planes.",
+                                              "Buildnow is my way of working with people to break down their problems and build a suitable solution for it in form of a mobile or web application.\n\nMy other interest include: motorsport, comics, animations, working out  and sketching. And, yeah, talking nonstop about cars and planes.",
                                               textAlign: TextAlign.left,
                                               style: bodyTextStyle,
                                             ),

@@ -1,4 +1,4 @@
-import 'package:buildnow/constants.dart';
+import 'package:buildnow/Shared/constants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,7 +74,7 @@ class ValueSection extends StatelessWidget {
                                     Container(
                                       padding: EdgeInsets.only(left: 10),
                                       child: Text(
-                                        "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Focused on taking your ideas from paper to product. I will ensure that you get a working product to ship to your current and future users.",
+                                        "Make it Tangible!\nFocused on taking your ideas from paper to product. I will ensure that you get a working product to ship to your current and future users.",
                                         textAlign: TextAlign.left,
                                         style: mobileBodyTextStyle,
                                       ),

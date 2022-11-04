@@ -5,7 +5,7 @@ import 'package:buildnow/Mobile/IntroSection.dart';
 import 'package:buildnow/Mobile/ValueOffered.dart';
 import 'package:buildnow/Mobile/contactPage.dart';
 
-import 'package:buildnow/constants.dart';
+import 'package:buildnow/Shared/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
