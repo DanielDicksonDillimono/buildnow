@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:buildnow/arrow_icons_icons.dart';
 import 'package:buildnow/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -27,6 +28,56 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
           children: [
             Stack(
               children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    padding: EdgeInsets.all(50),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.15,
+                          padding: EdgeInsets.only(
+                            left: 30,
+                            right: 30,
+                          ),
+                          child: Divider(
+                            indent: 20,
+                            endIndent: 0,
+                            color: Color.fromARGB(255, 148, 148, 148),
+                            thickness: 1.5,
+                          ),
+                        ),
+                        // AnimatedTextKit(animatedTexts: [
+                        //   TyperAnimatedText(
+                        //     "Scroll down",
+                        //     textStyle: GoogleFonts.montserrat(
+                        //       color: Color.fromARGB(255, 148, 148, 148),
+                        //       fontWeight: FontWeight.w200,
+                        //       fontSize: 20,
+                        //       //overflow: TextOverflow.visible,
+                        //     ),
+                        //   ),
+                        // ])
+
+                        Text(
+                          "Scroll Right",
+                          style: GoogleFonts.montserrat(
+                            color: Color.fromARGB(255, 148, 148, 148),
+                            fontWeight: FontWeight.w300,
+                            fontSize: 20,
+                            //overflow: TextOverflow.visible,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_circle_right_outlined,
+                          color: Color.fromARGB(255, 148, 148, 148),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 // Container(
                 //   padding: EdgeInsets.all(20),
                 //   child: Divider(
@@ -45,16 +96,35 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          "MY\nAPPROACH",
-                          style: GoogleFonts.passionOne(
-                            color: backGroundTextColor,
+                        // Text(
+                        //   "MY\nAPPROACH",
+                        //   style: GoogleFonts.passionOne(
+                        //     color: backGroundTextColor,
 
-                            fontWeight: FontWeight.bold,
-                            fontSize: MediaQuery.of(context).size.width * 0.10,
-                            //overflow: TextOverflow.visible,
-                          ),
-                          textAlign: TextAlign.left,
+                        //     fontWeight: FontWeight.bold,
+                        //     fontSize: MediaQuery.of(context).size.width * 0.10,
+                        //     //overflow: TextOverflow.visible,
+                        //   ),
+                        //   textAlign: TextAlign.left,
+                        // ),
+                        AnimatedTextKit(
+                          totalRepeatCount: 1,
+                          animatedTexts: [
+                            TyperAnimatedText(
+                              "MY\nAPPROACH",
+                              speed: Duration(
+                                milliseconds: 100,
+                              ),
+                              textStyle: GoogleFonts.passionOne(
+                                color: backGroundTextColor,
+
+                                fontWeight: FontWeight.bold,
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.10,
+                                //overflow: TextOverflow.visible,
+                              ),
+                            ),
+                          ],
                         ),
                         Icon(
                           ArrowIcons.arrowtest,

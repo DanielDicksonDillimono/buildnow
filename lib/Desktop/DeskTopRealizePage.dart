@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:buildnow/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,16 +42,36 @@ class _DeskTopRealizePageState extends State<DeskTopRealizePage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "REALIZE",
-                          style: GoogleFonts.passionOne(
-                            color: backGroundTextColor,
+                        // Text(
+                        //   "REALIZE",
+                        //   style: GoogleFonts.passionOne(
+                        //     color: backGroundTextColor,
 
-                            fontWeight: FontWeight.bold,
-                            fontSize: MediaQuery.of(context).size.width * 0.10,
-                            //overflow: TextOverflow.visible,
-                          ),
-                          textAlign: TextAlign.left,
+                        //     fontWeight: FontWeight.bold,
+                        //     fontSize: MediaQuery.of(context).size.width * 0.10,
+                        //     //overflow: TextOverflow.visible,
+                        //   ),
+                        //   textAlign: TextAlign.left,
+                        // ),
+
+                        AnimatedTextKit(
+                          totalRepeatCount: 1,
+                          animatedTexts: [
+                            TyperAnimatedText(
+                              "REALIZE",
+                              speed: Duration(
+                                milliseconds: 100,
+                              ),
+                              textStyle: GoogleFonts.passionOne(
+                                color: backGroundTextColor,
+
+                                fontWeight: FontWeight.bold,
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.10,
+                                //overflow: TextOverflow.visible,
+                              ),
+                            ),
+                          ],
                         ),
                         Icon(
                           CupertinoIcons.lightbulb_fill,

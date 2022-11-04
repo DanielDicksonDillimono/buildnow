@@ -51,7 +51,7 @@ ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
 //NavBar
 TextStyle navBarTextStyle = GoogleFonts.montserrat(
   color: Colors.white,
-  fontWeight: FontWeight.w300,
+  fontWeight: FontWeight.w400,
   fontSize: 20,
   //overflow: TextOverflow.visible,
 );
