@@ -74,7 +74,7 @@ class ValueSection extends StatelessWidget {
                                     Container(
                                       padding: EdgeInsets.only(left: 10),
                                       child: Text(
-                                        "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. For creating mobile applications, Flutter is my weapon of choice due to its versatility and clean material design. Always excited to brainstorm ideas, design them and bring them to reality. Do not wait, BUILDNOW!",
+                                        "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Focused on taking your ideas from paper to product. I will ensure that you get a working product to ship to your current and future users.",
                                         textAlign: TextAlign.left,
                                         style: mobileBodyTextStyle,
                                       ),

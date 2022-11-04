@@ -225,36 +225,50 @@ class _DeskTopViewState extends State<DeskTopView> {
             color: Color.fromARGB(255, 38, 38, 38),
             child: Stack(
               children: [
-                Positioned(
-                  top: 200,
-                  left: 200,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.5,
-                        padding: EdgeInsets.only(
-                          left: 30,
-                          right: 30,
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Container(
+                    padding: EdgeInsets.all(50),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.35,
+                          padding: EdgeInsets.only(
+                            left: 30,
+                            right: 30,
+                          ),
+                          child: VerticalDivider(
+                            width: 20,
+                            indent: 20,
+                            endIndent: 0,
+                            color: Color.fromARGB(255, 148, 148, 148),
+                            thickness: 1,
+                          ),
                         ),
-                        child: VerticalDivider(
-                          width: 20,
-                          indent: 20,
-                          endIndent: 0,
-                          color: Color.fromARGB(255, 148, 148, 148),
-                          thickness: 0.5,
-                        ),
-                      ),
-                      Text(
-                        "Scroll down",
-                        style: GoogleFonts.montserrat(
-                          color: Color.fromARGB(255, 148, 148, 148),
-                          fontWeight: FontWeight.w100,
-                          fontSize: 20,
-                          //overflow: TextOverflow.visible,
-                        ),
-                      )
-                    ],
+                        AnimatedTextKit(animatedTexts: [
+                          TyperAnimatedText(
+                            "Scroll down",
+                            textStyle: GoogleFonts.montserrat(
+                              color: Color.fromARGB(255, 148, 148, 148),
+                              fontWeight: FontWeight.w200,
+                              fontSize: 20,
+                              //overflow: TextOverflow.visible,
+                            ),
+                          ),
+                        ])
+                        // Text(
+                        //   "Scroll down",
+                        //   style: GoogleFonts.montserrat(
+                        //     color: Color.fromARGB(255, 148, 148, 148),
+                        //     fontWeight: FontWeight.w100,
+                        //     fontSize: 20,
+                        //     //overflow: TextOverflow.visible,
+                        //   ),
+                        // )
+                      ],
+                    ),
                   ),
                 ),
                 SingleChildScrollView(
@@ -303,65 +317,36 @@ class _DeskTopViewState extends State<DeskTopView> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.end,
                                         children: [
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
-                                            children: [
-                                              SizedBox(
-                                                height: 50,
+                                          SizedBox(
+                                            height: 50,
+                                          ),
+                                          AnimatedTextKit(
+                                            totalRepeatCount: 1,
+                                            onNext: (stage, done) {},
+                                            onFinished: () {
+                                              setState(() {
+                                                animationDone = true;
+                                              });
+                                            },
+                                            animatedTexts: [
+                                              TyperAnimatedText(
+                                                "Bring your app ideas\nto life.",
+                                                textStyle:
+                                                    GoogleFonts.passionOne(
+                                                  color: Colors.white,
+
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize:
+                                                      MediaQuery.of(context)
+                                                              .size
+                                                              .width *
+                                                          0.10,
+                                                  //overflow: TextOverflow.visible,
+                                                ),
+                                                textAlign: TextAlign.right,
+                                                speed: const Duration(
+                                                    milliseconds: 70),
                                               ),
-                                              animationDone
-                                                  ? Text(
-                                                      "Bring your app ideas\nto life.",
-                                                      style: GoogleFonts
-                                                          .passionOne(
-                                                        color: Colors.white,
-
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 200,
-                                                        //overflow: TextOverflow.visible,
-                                                      ),
-                                                      textAlign:
-                                                          TextAlign.right,
-                                                    )
-                                                  : AnimatedTextKit(
-                                                      totalRepeatCount: 1,
-                                                      onNext: (stage, done) {},
-                                                      onFinished: () {
-                                                        setState(() {
-                                                          animationDone = true;
-                                                        });
-                                                      },
-                                                      animatedTexts: [
-                                                        TyperAnimatedText(
-                                                          "Bring your app ideas\nto life.",
-                                                          textStyle: GoogleFonts
-                                                              .passionOne(
-                                                            color: Colors.white,
-
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 200,
-                                                            //overflow: TextOverflow.visible,
-                                                          ),
-                                                          textAlign:
-                                                              TextAlign.right,
-                                                          speed: const Duration(
-                                                              milliseconds: 70),
-                                                        ),
-                                                      ],
-                                                    ),
-                                              // Text(
-                                              //   "Specify | Build",
-                                              //   style: GoogleFonts.montserrat(
-                                              //     color: Colors.white,
-                                              //     fontWeight: FontWeight.w100,
-                                              //     fontSize: 40,
-                                              //     //overflow: TextOverflow.visible,
-                                              //   ),
-                                              //   textAlign: TextAlign.left,
-                                              // ),
                                             ],
                                           ),
                                           // Container(
@@ -422,6 +407,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                         ),
                       ),
 
+//realize
                       Container(
                         color: mainColor,
                         height: MediaQuery.of(context).size.height,
@@ -458,14 +444,20 @@ class _DeskTopViewState extends State<DeskTopView> {
                                               color: backGroundTextColor,
 
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 200,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.10,
                                               //overflow: TextOverflow.visible,
                                             ),
                                             textAlign: TextAlign.left,
                                           ),
                                           Icon(
                                             CupertinoIcons.lightbulb_fill,
-                                            size: 200,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.10,
                                             color:
                                                 Color.fromARGB(255, 255, 0, 0),
                                           )
@@ -579,7 +571,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                                                               EdgeInsets.only(
                                                                   left: 10),
                                                           child: Text(
-                                                            "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. Focused on taking your ideas from paper to product. I will ensure that you get a working product to ship to your current and future users.",
+                                                            "Make it Tangible!\nFocused on taking your ideas from paper to product. I will ensure that you get a working product to ship to your current and future users.",
                                                             textAlign:
                                                                 TextAlign.left,
                                                             style:
@@ -641,14 +633,20 @@ class _DeskTopViewState extends State<DeskTopView> {
                                               color: backGroundTextColor,
 
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 200,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.10,
                                               //overflow: TextOverflow.visible,
                                             ),
                                             textAlign: TextAlign.left,
                                           ),
                                           Icon(
                                             ArrowIcons.arrowtest,
-                                            size: 200,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.10,
                                             color:
                                                 Color.fromARGB(255, 255, 0, 0),
                                           )
@@ -1222,14 +1220,20 @@ class _DeskTopViewState extends State<DeskTopView> {
                                               color: backGroundTextColor,
 
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 200,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.10,
                                               //overflow: TextOverflow.visible,
                                             ),
                                             textAlign: TextAlign.left,
                                           ),
                                           Icon(
                                             CupertinoIcons.person_alt,
-                                            size: 200,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.10,
                                             color:
                                                 Color.fromARGB(255, 255, 0, 0),
                                           )
@@ -1275,86 +1279,205 @@ class _DeskTopViewState extends State<DeskTopView> {
 
                                   Positioned.fill(
                                     child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
+                                      scrollDirection: Axis.vertical,
+                                      child: Column(
                                         children: [
-                                          //Specify button
                                           SizedBox(
                                             width: MediaQuery.of(context)
                                                     .size
                                                     .width *
                                                 0.7,
-                                            child: Align(
-                                              alignment: Alignment.bottomRight,
-                                              child: Container(
-                                                padding: EdgeInsets.all(20),
-                                                width: 900,
-                                                child: Container(
-                                                  padding: EdgeInsets.all(20),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.min,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      // Column(
-                                                      //   mainAxisSize:
-                                                      //       MainAxisSize
-                                                      //           .min,
-                                                      //   children: [
-                                                      //     Container(
-                                                      //       padding: EdgeInsets
-                                                      //           .only(
-                                                      //               top:
-                                                      //                   5),
-                                                      //       child: Icon(
-                                                      //         BuildNowIcons
-                                                      //             .specifyicon,
-                                                      //         size: 50,
-                                                      //         color: Colors
-                                                      //             .white,
-                                                      //       ),
-                                                      //     ),
-                                                      //     Text(
-                                                      //         "DISCUSS",
-                                                      //         style:
-                                                      //             subHeadingTextStyle),
-                                                      //   ],
-                                                      // ),
-                                                      Container(
-                                                        height: 200,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                          left: 30,
-                                                          right: 30,
-                                                        ),
-                                                        child: VerticalDivider(
-                                                          width: 20,
-                                                          indent: 20,
-                                                          endIndent: 0,
-                                                          color: Colors.white,
-                                                          thickness: 2,
-                                                        ),
-                                                      ),
-                                                      Flexible(
-                                                        child: Container(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  left: 10),
-                                                          child: Text(
-                                                            "I know what it feels like to have an idea stuck in your head and the desire to turn that into something tangible. For creating mobile applications, Flutter is my weapon of choice due to its versatility and clean material design. Always excited to brainstorm ideas, design them and bring them to reality. Do not wait, BUILDNOW!",
-                                                            textAlign:
-                                                                TextAlign.left,
-                                                            style:
-                                                                bodyTextStyle,
+                                            height: MediaQuery.of(context)
+                                                .size
+                                                .height,
+                                            child: Stack(
+                                              children: [
+                                                Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: Container(
+                                                    padding: EdgeInsets.all(20),
+                                                    width: 900,
+                                                    child: Container(
+                                                      padding:
+                                                          EdgeInsets.all(20),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Container(
+                                                            height: 200,
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                              left: 30,
+                                                              right: 30,
+                                                            ),
+                                                            child:
+                                                                VerticalDivider(
+                                                              width: 20,
+                                                              indent: 20,
+                                                              endIndent: 0,
+                                                              color:
+                                                                  Colors.white,
+                                                              thickness: 2,
+                                                            ),
                                                           ),
-                                                        ),
-                                                      )
-                                                    ],
+                                                          Flexible(
+                                                            child: Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      left: 10),
+                                                              child: Text(
+                                                                "As a child I have always been intrigued by technology and how things work. I can remember my first big purchase, a stack of “Growing up with Science” encyclopaedias. I was 9 at that time.\nSince my dreams to become a fighter pilot like my father has not come as early as I desired, I buried my head into learning other things like programming and human behaviour.",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .left,
+                                                                style:
+                                                                    bodyTextStyle,
+                                                              ),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.7,
+                                            height: MediaQuery.of(context)
+                                                .size
+                                                .height,
+                                            child: Stack(
+                                              children: [
+                                                Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: Container(
+                                                    padding: EdgeInsets.all(20),
+                                                    width: 900,
+                                                    child: Container(
+                                                      padding:
+                                                          EdgeInsets.all(20),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Container(
+                                                            height: 200,
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                              left: 30,
+                                                              right: 30,
+                                                            ),
+                                                            child:
+                                                                VerticalDivider(
+                                                              width: 20,
+                                                              indent: 20,
+                                                              endIndent: 0,
+                                                              color:
+                                                                  Colors.white,
+                                                              thickness: 2,
+                                                            ),
+                                                          ),
+                                                          Flexible(
+                                                            child: Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      left: 10),
+                                                              child: Text(
+                                                                "Moved to the Netherlands to study Creative Technology. After my study, I worked as an embedded software engineer and application software developer. My stint as Software Developer exposed me to working in relatively large teams and collaborating with individuals of varying expertise",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .left,
+                                                                style:
+                                                                    bodyTextStyle,
+                                                              ),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.7,
+                                            height: MediaQuery.of(context)
+                                                .size
+                                                .height,
+                                            child: Stack(
+                                              children: [
+                                                Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: Container(
+                                                    padding: EdgeInsets.all(20),
+                                                    width: 900,
+                                                    child: Container(
+                                                      padding:
+                                                          EdgeInsets.all(20),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Container(
+                                                            height: 200,
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                              left: 30,
+                                                              right: 30,
+                                                            ),
+                                                            child:
+                                                                VerticalDivider(
+                                                              width: 20,
+                                                              indent: 20,
+                                                              endIndent: 0,
+                                                              color:
+                                                                  Colors.white,
+                                                              thickness: 2,
+                                                            ),
+                                                          ),
+                                                          Flexible(
+                                                            child: Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      left: 10),
+                                                              child: Text(
+                                                                "Buildnow is my way of working with people to break down their problems and build a suitable solution for it in form of a mobile or web application.\n\nMy other interest include, motorsport, comics, animations, working out  and sketching. And, yeah, talking nonstop about cars and planes.",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .left,
+                                                                style:
+                                                                    bodyTextStyle,
+                                                              ),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ],
