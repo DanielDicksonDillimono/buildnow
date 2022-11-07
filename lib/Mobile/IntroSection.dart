@@ -70,33 +70,33 @@ class _IntroSectionState extends State<IntroSection> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                "Bring your\napp ideas\nto life.",
-                                style: GoogleFonts.anton(
-                                  color: Colors.white,
+                              // Text(
+                              //   "Bring your\napp ideas\nto life.",
+                              //   style: GoogleFonts.anton(
+                              //     color: Colors.white,
 
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize:
-                                      MediaQuery.of(context).size.width * 0.15,
-                                  //overflow: TextOverflow.visible,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
+                              //     // fontWeight: FontWeight.bold,
+                              //     fontSize:
+                              //         MediaQuery.of(context).size.width * 0.15,
+                              //     //overflow: TextOverflow.visible,
+                              //   ),
+                              //   textAlign: TextAlign.left,
+                              // ),
                               SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                "Hi, I'm",
+                                "Hi, I'm Daniel",
                                 style: mobileBodyTextStyle,
                               ),
                               Text(
-                                "Daniel",
+                                "I turn ideas into\nMobile and Web applications",
                                 style: mobileSubHeadingTextStyle,
                               ),
-                              Text(
-                                "I build Mobile and the Web applications",
-                                style: mobileBodyTextStyle,
-                              ),
+                              // Text(
+                              //   "Mobile and the Web applications",
+                              //   style: mobileBodyTextStyle,
+                              // ),
                               Container(
                                 padding: EdgeInsets.only(
                                   top: 20,

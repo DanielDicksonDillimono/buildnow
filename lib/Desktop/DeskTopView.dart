@@ -169,7 +169,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Hi, I'm Daniel and I build",
+                                    "Hi, I'm Daniel and I turn ideas into",
                                     style: GoogleFonts.montserrat(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w100,

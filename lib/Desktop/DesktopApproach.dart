@@ -70,10 +70,10 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
                             //overflow: TextOverflow.visible,
                           ),
                         ),
-                        Icon(
-                          Icons.arrow_circle_right_outlined,
-                          color: Color.fromARGB(255, 148, 148, 148),
-                        ),
+                        // Icon(
+                        //   Icons.arrow_circle_right_outlined,
+                        //   color: Color.fromARGB(255, 148, 148, 148),
+                        // ),
                       ],
                     ),
                   ),
@@ -129,7 +129,7 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
                         Icon(
                           ArrowIcons.arrowtest,
                           size: MediaQuery.of(context).size.width * 0.10,
-                          color: Color.fromARGB(255, 255, 0, 0),
+                          color: Color.fromARGB(16, 255, 0, 0),
                         )
                       ],
                     ),
@@ -354,7 +354,7 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
                                                   padding:
                                                       EdgeInsets.only(left: 10),
                                                   child: Text(
-                                                    "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of the choosen solution. This will help us estimate how long the project will take.",
+                                                    "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of the chosen solution.",
                                                     textAlign: TextAlign.left,
                                                     style: bodyTextStyle,
                                                   ),
@@ -481,7 +481,7 @@ class _DesktopApproachPageState extends State<DesktopApproachPage> {
                                                   padding:
                                                       EdgeInsets.only(left: 10),
                                                   child: Text(
-                                                    "Let's put all our work into code. The development process begin. I will keep you updated based on the planned dates.",
+                                                    "Let's put all our work into code. The development process begins. I will keep you updated based on the planned dates, making corrections as we head towards your desired product",
                                                     textAlign: TextAlign.left,
                                                     style: bodyTextStyle,
                                                   ),

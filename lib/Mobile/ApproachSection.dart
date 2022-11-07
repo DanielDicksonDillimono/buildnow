@@ -279,7 +279,7 @@ class ApproachSection extends StatelessWidget {
                                                   padding:
                                                       EdgeInsets.only(left: 10),
                                                   child: Text(
-                                                    "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of the choosen solution. This will help us estimate how long the project will take.",
+                                                    "Together with a UI/UX expert of your choice or mine, we will create wireframes and mockups of the chosen solution.",
                                                     textAlign: TextAlign.left,
                                                     style: mobileBodyTextStyle,
                                                   ),
@@ -410,7 +410,7 @@ class ApproachSection extends StatelessWidget {
                                                   padding:
                                                       EdgeInsets.only(left: 10),
                                                   child: Text(
-                                                    "Let's put all our work into code. The development process begin. I will keep you updated based on the planned dates.",
+                                                    "Let's put all our work into code. The development process begins. I will keep you updated based on the planned dates, making corrections as we head towards your desired product",
                                                     textAlign: TextAlign.left,
                                                     style: mobileBodyTextStyle,
                                                   ),

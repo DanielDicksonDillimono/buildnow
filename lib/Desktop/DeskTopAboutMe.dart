@@ -3,6 +3,7 @@ import 'package:buildnow/Shared/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DeskTopAboutMePage extends StatefulWidget {
   const DeskTopAboutMePage({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                             thickness: 1.5,
                           ),
                         ),
+
                         // AnimatedTextKit(animatedTexts: [
                         //   TyperAnimatedText(
                         //     "Scroll down",
@@ -68,10 +70,10 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                             //overflow: TextOverflow.visible,
                           ),
                         ),
-                        Icon(
-                          Icons.arrow_circle_down_outlined,
-                          color: Color.fromARGB(255, 148, 148, 148),
-                        ),
+                        // Icon(
+                        //   Icons.arrow_circle_down_outlined,
+                        //   color: Color.fromARGB(255, 148, 148, 148),
+                        // ),
                       ],
                     ),
                   ),
@@ -86,9 +88,7 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                 //   ),
                 // ),
                 Positioned(
-                  //alignment: Alignment.centerLeft,
                   top: 300,
-
                   child: Container(
                     padding: EdgeInsets.only(left: 20),
                     child: Row(
@@ -128,47 +128,12 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                         Icon(
                           CupertinoIcons.person_alt,
                           size: MediaQuery.of(context).size.width * 0.10,
-                          color: Color.fromARGB(255, 255, 0, 0),
+                          color: Color.fromARGB(16, 255, 0, 0),
                         )
                       ],
                     ),
                   ),
                 ),
-
-                // Align(
-                //   alignment: Alignment.center,
-                //   child: SingleChildScrollView(
-                //     scrollDirection: Axis.horizontal,
-                //     child: Row(
-                //       children: [
-                //         // Container(
-                //         //   padding: EdgeInsets.all(20),
-                //         //   height: 200,
-                //         //   color: Color.fromARGB(
-                //         //       140, 0, 140, 255),
-                //         //   width: MediaQuery.of(context)
-                //         //           .size
-                //         //           .width *
-                //         //       0.7,
-                //         // ),
-                //         SizedBox(
-                //           width: MediaQuery.of(context)
-                //                   .size
-                //                   .width *
-                //               0.5,
-                //           child: Image.asset(
-                //             "lana.PNG",
-                //             //colorBlendMode: BlendMode.screen,
-                //             //color: Color.fromARGB(25, 255, 255, 255),
-                //             fit: BoxFit.cover,
-                //             filterQuality:
-                //                 FilterQuality.medium,
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
 
                 Positioned.fill(
                   child: SingleChildScrollView(
@@ -210,7 +175,7 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                                           child: Container(
                                             padding: EdgeInsets.only(left: 10),
                                             child: Text(
-                                              "As a child I have always been intrigued by technology and how things work. I can remember my first big purchase, a stack of “Growing up with Science” encyclopaedias. I was 9 at that time.\nSince my dreams to become a fighter pilot like my father has not come as early as I desired, I buried my head into learning other things like programming and human behaviour.",
+                                              "As a child I have always been intrigued by technology and how things work. I can remember my first big purchase, a stack of “Growing up with Science” encyclopaedias. I was 9 at that time.\n\nSince my dreams to become a fighter pilot like my father has not come as early as I desired, I have buried my head into learning other things like programming.",
                                               textAlign: TextAlign.left,
                                               style: bodyTextStyle,
                                             ),
@@ -307,10 +272,73 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                                         Flexible(
                                           child: Container(
                                             padding: EdgeInsets.only(left: 10),
-                                            child: Text(
-                                              "Buildnow is my way of working with people to break down their problems and build a suitable solution for it in form of a mobile or web application.\n\nMy other interest include: motorsport, comics, animations, working out  and sketching. And, yeah, talking nonstop about cars and planes.",
-                                              textAlign: TextAlign.left,
-                                              style: bodyTextStyle,
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Presently, with Buildnow, I get to work with people, break down their problems and, together, build a suitable solution usually in form of a mobile or web application.\n\nBesides building appplications, my other interest include: motorsport, comics, animations, working out and sketching. And, yeah, talking nonstop about cars and planes.",
+                                                  textAlign: TextAlign.left,
+                                                  style: bodyTextStyle,
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.only(
+                                                    top: 50,
+                                                  ),
+                                                  child: Wrap(
+                                                    children: [
+                                                      Text(
+                                                        "Check out the git repo for this website written in dart: ",
+                                                        style: bodyTextStyle,
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          launchUrl(
+                                                            Uri.parse(
+                                                                "https://github.com/UnculturedCat/buildnow"),
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          "GitHub",
+                                                          style: bodyTextStyle
+                                                              .copyWith(
+                                                                  color: Colors
+                                                                      .blue),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.only(
+                                                    top: 10,
+                                                  ),
+                                                  child: Wrap(
+                                                    children: [
+                                                      Text(
+                                                        "And let's connect on",
+                                                        style: bodyTextStyle,
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          launchUrl(
+                                                            Uri.parse(
+                                                                "https://www.linkedin.com/in/daniel-dickson-dillimono/"),
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          "LinkedIn",
+                                                          style: bodyTextStyle
+                                                              .copyWith(
+                                                                  color: Colors
+                                                                      .blue),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         )

@@ -76,7 +76,7 @@ class _DeskTopRealizePageState extends State<DeskTopRealizePage> {
                         Icon(
                           CupertinoIcons.lightbulb_fill,
                           size: MediaQuery.of(context).size.width * 0.10,
-                          color: Color.fromARGB(255, 255, 0, 0),
+                          color: Color.fromARGB(16, 255, 0, 0),
                         )
                       ],
                     ),
