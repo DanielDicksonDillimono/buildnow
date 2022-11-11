@@ -19,9 +19,11 @@ class _ContactPageState extends State<ContactPage> {
   void initState() {
     Timer.periodic(Duration(seconds: 2), (timer) {
       timer.cancel();
-      setState(() {
-        animateButton = true;
-      });
+      if (mounted) {
+        (() {
+          animateButton = true;
+        });
+      }
     });
     super.initState();
   }

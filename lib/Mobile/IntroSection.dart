@@ -17,9 +17,11 @@ class _IntroSectionState extends State<IntroSection> {
   void initState() {
     Timer.periodic(Duration(seconds: 2), (timer) {
       timer.cancel();
-      setState(() {
-        animateButton = true;
-      });
+      if (mounted) {
+        setState(() {
+          animateButton = true;
+        });
+      }
     });
     super.initState();
   }

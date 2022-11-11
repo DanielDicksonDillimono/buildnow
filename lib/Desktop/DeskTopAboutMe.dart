@@ -147,6 +147,25 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                             children: [
                               Align(
                                 alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "Child.png",
+                                    // colorBlendMode: BlendMode.screen,
+                                    // color:
+                                    //     Color.fromARGB(25, 255, 255, 255),
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.5,
+                                    // height:
+                                    //     MediaQuery.of(context).size.width *
+                                    //         0.5,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
                                 child: Container(
                                   padding: EdgeInsets.all(20),
                                   width: 900,
@@ -196,6 +215,25 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                             children: [
                               Align(
                                 alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "NL.png",
+                                    // colorBlendMode: BlendMode.screen,
+                                    // color:
+                                    //     Color.fromARGB(25, 255, 255, 255),
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.3,
+                                    // height:
+                                    //     MediaQuery.of(context).size.width *
+                                    //         0.5,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
                                 child: Container(
                                   padding: EdgeInsets.all(20),
                                   width: 900,
@@ -243,6 +281,25 @@ class _DeskTopAboutMePageState extends State<DeskTopAboutMePage> {
                           height: MediaQuery.of(context).size.height,
                           child: Stack(
                             children: [
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "talk.png",
+                                    // colorBlendMode: BlendMode.screen,
+                                    // color:
+                                    //     Color.fromARGB(25, 255, 255, 255),
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.3,
+                                    // height:
+                                    //     MediaQuery.of(context).size.width *
+                                    //         0.5,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
+                                  ),
+                                ),
+                              ),
                               Align(
                                 alignment: Alignment.bottomRight,
                                 child: Container(

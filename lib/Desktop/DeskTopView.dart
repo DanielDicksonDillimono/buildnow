@@ -182,7 +182,7 @@ class _DeskTopViewState extends State<DeskTopView> {
                                   //   style: subHeadingTextStyle,
                                   // ),
                                   Text(
-                                    "Mobile and the Web applications",
+                                    "Mobile and Web applications",
                                     style: bodyTextStyle,
                                   ),
                                   Container(

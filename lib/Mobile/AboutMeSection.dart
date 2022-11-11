@@ -108,210 +108,262 @@ class AboutMeSection extends StatelessWidget {
                         SizedBox(
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.height,
-                          child: Align(
-                            alignment: Alignment.bottomRight,
-                            child: Container(
-                              padding: EdgeInsets.all(20),
-                              //width: 900,
-                              child: Container(
-                                padding: EdgeInsets.all(20),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.only(
-                                          left: 30,
-                                          right: 30,
-                                        ),
-                                        child: Divider(
-                                          color: Color.fromARGB(
-                                              123, 158, 158, 158),
-                                          thickness: 0.5,
-                                        ),
-                                      ),
-                                      Flexible(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              padding:
-                                                  EdgeInsets.only(left: 10),
-                                              child: Text(
-                                                "As a child I have always been intrigued by technology and how things work. I can remember my first big purchase, a stack of “Growing up with Science” encyclopaedias. I was 9 at that time.\n\nSince my dreams to become a fighter pilot like my father has not come as early as I desired, I have buried my head into learning other things like programming.",
-                                                textAlign: TextAlign.left,
-                                                style: mobileBodyTextStyle,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "Child.png",
+                                    // width:
+                                    //     MediaQuery.of(context).size.width * 0.5,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
                                   ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height,
-                          child: Align(
-                            alignment: Alignment.bottomRight,
-                            child: Container(
-                              padding: EdgeInsets.all(20),
-                              //width: 900,
-                              child: Container(
-                                padding: EdgeInsets.all(20),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.only(
-                                          left: 30,
-                                          right: 30,
-                                        ),
-                                        child: Divider(
-                                          color: Color.fromARGB(
-                                              123, 158, 158, 158),
-                                          thickness: 0.5,
-                                        ),
-                                      ),
-                                      Flexible(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              padding:
-                                                  EdgeInsets.only(left: 10),
-                                              child: Text(
-                                                "Moved to the Netherlands to study Creative Technology. After my study, I worked as an embedded software engineer and application software developer. My stint as Software Developer exposed me to working in relatively large teams and collaborating with individuals of varying expertise",
-                                                textAlign: TextAlign.left,
-                                                style: mobileBodyTextStyle,
-                                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  //width: 900,
+                                  child: Container(
+                                    padding: EdgeInsets.all(20),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                              left: 30,
+                                              right: 30,
                                             ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height,
-                          child: Align(
-                            alignment: Alignment.bottomRight,
-                            child: Container(
-                              padding: EdgeInsets.all(20),
-                              //width: 900,
-                              child: Container(
-                                padding: EdgeInsets.all(20),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.only(
-                                          left: 30,
-                                          right: 30,
-                                        ),
-                                        child: Divider(
-                                          color: Color.fromARGB(
-                                              123, 158, 158, 158),
-                                          thickness: 0.5,
-                                        ),
-                                      ),
-                                      Flexible(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              padding:
-                                                  EdgeInsets.only(left: 10),
-                                              child: Text(
-                                                "Presently, with Buildnow, I get to work with people, break down their problems and, together, build a suitable solution usually in form of a mobile or web application.\n\nBesides building appplications, my other interest include: motorsport, comics, animations, working out and sketching. And, yeah, talking nonstop about cars and planes.",
-                                                textAlign: TextAlign.left,
-                                                style: mobileBodyTextStyle,
-                                              ),
+                                            child: Divider(
+                                              color: Color.fromARGB(
+                                                  123, 158, 158, 158),
+                                              thickness: 0.5,
                                             ),
-                                            Container(
-                                              padding: EdgeInsets.only(
-                                                top: 50,
-                                              ),
-                                              child: Wrap(
-                                                children: [
-                                                  Text(
-                                                    "Check out the git repo for this website written in dart: ",
+                                          ),
+                                          Flexible(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(left: 10),
+                                                  child: Text(
+                                                    "As a child I have always been intrigued by technology and how things work. I can remember my first big purchase, a stack of “Growing up with Science” encyclopaedias. I was 9 at that time.\n\nSince my dreams to become a fighter pilot like my father has not come as early as I desired, I have buried my head into learning other things like programming.",
+                                                    textAlign: TextAlign.left,
                                                     style: mobileBodyTextStyle,
                                                   ),
-                                                  TextButton(
-                                                    onPressed: () {
-                                                      launchUrl(
-                                                        Uri.parse(
-                                                            "https://github.com/UnculturedCat/buildnow"),
-                                                      );
-                                                    },
-                                                    child: Text(
-                                                      "GitHub",
-                                                      style: mobileBodyTextStyle
-                                                          .copyWith(
-                                                              color:
-                                                                  Colors.blue),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                            Container(
-                                              padding: EdgeInsets.only(
-                                                top: 10,
-                                              ),
-                                              child: Wrap(
-                                                children: [
-                                                  Text(
-                                                    "And let's connect on",
-                                                    style: bodyTextStyle,
-                                                  ),
-                                                  TextButton(
-                                                    onPressed: () {
-                                                      launchUrl(
-                                                        Uri.parse(
-                                                            "https://www.linkedin.com/in/daniel-dickson-dillimono/"),
-                                                      );
-                                                    },
-                                                    child: Text(
-                                                      "LinkedIn",
-                                                      style: bodyTextStyle
-                                                          .copyWith(
-                                                              color:
-                                                                  Colors.blue),
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height,
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "NL.png",
+                                    // width:
+                                    //     MediaQuery.of(context).size.width,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  //width: 900,
+                                  child: Container(
+                                    padding: EdgeInsets.all(20),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                              left: 30,
+                                              right: 30,
+                                            ),
+                                            child: Divider(
+                                              color: Color.fromARGB(
+                                                  123, 158, 158, 158),
+                                              thickness: 0.5,
+                                            ),
+                                          ),
+                                          Flexible(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(left: 10),
+                                                  child: Text(
+                                                    "Moved to the Netherlands to study Creative Technology. After my study, I worked as an embedded software engineer and application software developer. My stint as Software Developer exposed me to working in relatively large teams and collaborating with individuals of varying expertise",
+                                                    textAlign: TextAlign.left,
+                                                    style: mobileBodyTextStyle,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height,
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Opacity(
+                                  opacity: 0.5,
+                                  child: Image.asset(
+                                    "talk.png",
+                                    // width:
+                                    //     MediaQuery.of(context).size.width * 0.3,
+                                    fit: BoxFit.contain,
+                                    filterQuality: FilterQuality.medium,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  //width: 900,
+                                  child: Container(
+                                    padding: EdgeInsets.all(20),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                              left: 30,
+                                              right: 30,
+                                            ),
+                                            child: Divider(
+                                              color: Color.fromARGB(
+                                                  123, 158, 158, 158),
+                                              thickness: 0.5,
+                                            ),
+                                          ),
+                                          Flexible(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  padding:
+                                                      EdgeInsets.only(left: 10),
+                                                  child: Text(
+                                                    "Presently, with Buildnow, I get to work with people, break down their problems and, together, build a suitable solution usually in form of a mobile or web application.\n\nBesides building appplications, my other interest include: motorsport, comics, animations, working out and sketching. And, yeah, talking nonstop about cars and planes.",
+                                                    textAlign: TextAlign.left,
+                                                    style: mobileBodyTextStyle,
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.only(
+                                                    top: 50,
+                                                  ),
+                                                  child: Wrap(
+                                                    children: [
+                                                      Text(
+                                                        "Check out the git repo for this website written in dart: ",
+                                                        style:
+                                                            mobileBodyTextStyle,
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          launchUrl(
+                                                            Uri.parse(
+                                                                "https://github.com/UnculturedCat/buildnow"),
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          "GitHub",
+                                                          style: mobileBodyTextStyle
+                                                              .copyWith(
+                                                                  color: Colors
+                                                                      .blue),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.only(
+                                                    top: 10,
+                                                  ),
+                                                  child: Wrap(
+                                                    children: [
+                                                      Text(
+                                                        "And let's connect on",
+                                                        style: bodyTextStyle,
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          launchUrl(
+                                                            Uri.parse(
+                                                                "https://www.linkedin.com/in/daniel-dickson-dillimono/"),
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          "LinkedIn",
+                                                          style: bodyTextStyle
+                                                              .copyWith(
+                                                                  color: Colors
+                                                                      .blue),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
